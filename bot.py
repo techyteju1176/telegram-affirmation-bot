@@ -11,7 +11,7 @@ URL = f"https://api.telegram.org/bot{TOKEN}"
 
 # ---- AFFIRMATIONS ----
 QUEEN_AFFIRMATIONS = [
-    "Yes Radhika, you are a Queen. Take time and choose something powerful — I will remind you every time you speak your truth: I AM QUEEN."
+    "Yes Radhika, you are a Queen. Take time and choose something powerful — I will remind you every time you say I AM QUEEN."
 ]
 
 # ---- TELEGRAM FUNCTIONS ----
@@ -44,7 +44,6 @@ def send_message(chat_id, text):
 def handle_message(text):
     text = text.lower().strip()
 
-    # Exact trigger (avoids spam)
     if text == "i am queen":
         return "👑 " + random.choice(QUEEN_AFFIRMATIONS)
 
@@ -61,7 +60,6 @@ def handle_message(text):
 
 def main():
     offset = None
-
     print("Bot is running...")
 
     while True:
@@ -80,6 +78,13 @@ def main():
             chat_id = msg["chat"]["id"]
             text = msg.get("text")
 
+            # 🔍 USER INFO LOGGING (IMPORTANT PART)
+            user = msg.get("from", {})
+            user_id = user.get("id")
+            name = user.get("first_name")
+
+            print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
+
             if not text:
                 continue
 
@@ -88,7 +93,7 @@ def main():
             if reply:
                 send_message(chat_id, reply)
 
-        time.sleep(1)  # prevents CPU overuse
+        time.sleep(1)
 
 
 if __name__ == "__main__":
