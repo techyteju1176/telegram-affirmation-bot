@@ -9,22 +9,27 @@ load_dotenv()
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 URL = f"https://api.telegram.org/bot{TOKEN}"
 
+# ---- USER CONFIG ----
+OWNER_ID = 5614161691
+RADHIKA_ID = 1406577493
+
 # ---- AFFIRMATIONS ----
 QUEEN_AFFIRMATIONS = [
-    "Yes Radhika, you are a Queen. Take time and choose something powerful — I will remind you every time you say I AM QUEEN."
+    "Yes Radhika, you are the Queen.Take time and choose something powerful — I will remind you every time you say I AM QUEEN."
 ]
 
 # ---- TELEGRAM FUNCTIONS ----
 
 def get_updates(offset=None):
+    url = URL + "/getUpdates"
+    params = {"timeout": 30, "offset": offset}
+
     try:
-        url = URL + "/getUpdates"
-        params = {"timeout": 30, "offset": offset}
         response = requests.get(url, params=params, timeout=35)
         return response.json()
-    except Exception as e:
-        print("Error fetching updates:", e)
-        time.sleep(2)
+    except requests.exceptions.RequestException as e:
+        print("Network issue:", e)
+        time.sleep(5)
         return {}
 
 
@@ -39,7 +44,7 @@ def send_message(chat_id, text):
             },
             timeout=10
         )
-        print("SEND STATUS:", res.status_code, res.text)
+        print("SEND STATUS:", res.status_code)
 
     except Exception as e:
         print("Error sending message:", e)
@@ -47,15 +52,22 @@ def send_message(chat_id, text):
 
 # ---- MESSAGE HANDLER ----
 
-def handle_message(text):
+def handle_message(text, user_id):
     text = text.lower().strip()
 
+    # ---- I AM QUEEN ----
     if "i am queen" in text:
-        return "👑 " + random.choice(QUEEN_AFFIRMATIONS)
+        if user_id == RADHIKA_ID:
+            return "👑 " + random.choice(QUEEN_AFFIRMATIONS)
 
-    elif "queen on the earth" in text:
+        else:
+            return "😌 I'm extremely sorry, but you are not the Queen. You must be the Queen's follower or servant."
+
+    # ---- WHO IS QUEEN ----
+    elif "who is queen" in text:
         return "👑 Radhika Deshkar"
 
+    # ---- WHO IS BEAUTIFUL ----
     elif "who is beautiful" in text:
         return "✨ Radhika Deshkar"
 
@@ -84,7 +96,6 @@ def main():
             chat_id = msg["chat"]["id"]
             text = msg.get("text")
 
-            # ---- USER LOGGING ----
             user = msg.get("from", {})
             user_id = user.get("id")
             name = user.get("first_name")
@@ -94,7 +105,7 @@ def main():
             if not text:
                 continue
 
-            reply = handle_message(text)
+            reply = handle_message(text, user_id)
 
             print("REPLY:", reply)
 
