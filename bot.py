@@ -15,8 +15,7 @@ RADHIKA_ID = 1406577493
 
 # ---- AFFIRMATIONS ----
 QUEEN_AFFIRMATIONS = [
-    "Yes Radhika, you are the Queen.Take time and choose something powerful — I will remind you every time you say I AM QUEEN."
-]
+"I am the queen of my own life—confident, respected, emotionally secure, and deeply fulfilled. I attract luxury, abundance, comfort, and peace with ease. I am financially independent, disciplined with savings, and capable of building a secure future. I honor my body, my privacy, my sensuality, and my personal pleasure with confidence and self-love. My husband and I share deep emotional intimacy, passion, romance, and joyful connection. I am deeply valued in his life, and our relationship is built on trust, affection, and mutual devotion. My in-laws respect my standards, appreciate my presence, and value my opinions. My parents are peaceful, proud, and happy seeing me thrive."]
 
 # ---- TELEGRAM FUNCTIONS ----
 
