@@ -263,7 +263,6 @@ def main():
 if user_id == RADHIKA_ID and text and "i am queen" in text.lower():
     save_last_seen(msg["date"])
     clear_reminder_sent()
-
             if not text:
                 continue
             reply = handle_message(text, user_id)
