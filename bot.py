@@ -55,14 +55,39 @@ def send_message(chat_id, text):
 
 # ---- REMINDER CHECK ----
 def check_reminder():
-    global reminder_sent
-    hours_48 = 48 * 60 * 60
-    elapsed = time.time() - last_seen
-    if elapsed >= hours_48 and not reminder_sent:
-        print("Sending reminder to Queen...")
-        send_message(RADHIKA_ID, random.choice(QUEEN_REMINDERS))
-        reminder_sent = True
+    last_seen = load_last_seen()
 
+    elapsed = time.time() - last_seen
+    hours_48 = 48 * 60 * 60
+
+    print("\n================ REMINDER CHECK ================")
+    print("Current Time :", time.ctime())
+    print("Last Seen    :", time.ctime(last_seen))
+    print(f"Elapsed      : {elapsed/3600:.2f} hours")
+    print("Reminder Sent:", is_reminder_sent())
+
+    if elapsed >= hours_48:
+
+        if not is_reminder_sent():
+
+            print("⏰ Sending 48 hour reminder...")
+
+            success = send_message(
+                RADHIKA_ID,
+                random.choice(QUEEN_REMINDERS)
+            )
+
+            if success:
+                print("✅ Reminder sent successfully.")
+                mark_reminder_sent()
+            else:
+                print("❌ Reminder NOT sent.")
+
+        else:
+            print("⚠ Reminder already sent.")
+
+    else:
+        print("⏳ 48 hours not reached yet.")
 # ---- MESSAGE HANDLER ----
 def handle_message(text, user_id):
     t = text.lower().strip()
