@@ -12,6 +12,7 @@ URL = f"https://api.telegram.org/bot{TOKEN}"
 # ---- USER CONFIG ----
 OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
+GROUP_CHAT_ID = -1003877021086
 
 # ---- FILE TO SAVE LAST SEEN ----
 LAST_SEEN_FILE = "last_seen.txt"
@@ -84,14 +85,16 @@ def send_message(chat_id, text):
         print("Error sending message:", e)
 
 # ---- REMINDER CHECK ----
+# ---- REMINDER DELAY (set to 48*60*60 for production, lower for testing) ----
+REMINDER_DELAY_SECONDS = 5 * 60  # 5 minutes for testing
+
 def check_reminder():
     last_seen = load_last_seen()
     elapsed = time.time() - last_seen
-    hours_48 = 48 * 60 * 60
-    print(f"⏱ Time since Queen last seen: {elapsed/3600:.1f} hours")
-    if elapsed >= hours_48 and not is_reminder_sent():
-        print("⏰ 48 hours passed — sending reminder to Queen...")
-        send_message(RADHIKA_ID, random.choice(QUEEN_REMINDERS))
+    print(f"⏱ Time since Queen last seen: {elapsed/60:.1f} minutes")
+    if elapsed >= REMINDER_DELAY_SECONDS and not is_reminder_sent():
+        print("⏰ Delay passed — sending reminder to Queen in group...")
+        send_message(GROUP_CHAT_ID, random.choice(QUEEN_REMINDERS))
         mark_reminder_sent()
 
 # ---- MESSAGE HANDLER ----
