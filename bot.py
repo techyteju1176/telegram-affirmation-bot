@@ -258,13 +258,13 @@ def main():
             name = user.get("first_name")
             print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
 
-            if user_id == RADHIKA_ID and text:
-                # Only a real text message counts as "activity" — stickers, photos,
-                # voice notes, etc. (where text is None) do NOT reset the timer.
+            if user_id == RADHIKA_ID and text and "i am queen" in text.lower():
+                # Only saying "I am queen" counts as activity — any other message,
+                # sticker, photo, etc. does NOT reset the timer.
                 # Uses Telegram's own message timestamp, not local processing time.
                 save_last_seen(msg["date"])
                 clear_reminder_sent()
-                print("👑 Queen sent a message — timer reset and saved to file.")
+                print("👑 Queen claimed her crown — timer reset and saved to file.")
 
             if not text:
                 continue
@@ -279,3 +279,4 @@ def main():
 # ---- START ----
 if __name__ == "__main__":
     main()
+
