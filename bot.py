@@ -238,36 +238,55 @@ def handle_message(text, user_id):
 
     return None
 
-# ---- MAIN LOOP ----
+# # ---- MAIN LOOP ----
 def main():
     offset = None
     print("✅ Bot is running...")
     print(f"📁 Tracking last seen in: {LAST_SEEN_FILE}")
+
     while True:
         data = get_updates(offset)
+
         if "result" not in data:
             check_reminder()
             time.sleep(2)
             continue
+
         for item in data["result"]:
             offset = item["update_id"] + 1
+
             if "message" not in item:
                 continue
+
             msg = item["message"]
             chat_id = msg["chat"]["id"]
-            text = msg.get("text")
+            text = msg.get("text", "")
             user = msg.get("from", {})
             user_id = user.get("id")
             name = user.get("first_name")
+
             print(f"CHAT ID: {chat_id} | USER ID: {user_id} | NAME: {name} | TEXT: {text}")
-if user_id == RADHIKA_ID and text and "i am queen" in text.lower():
-    save_last_seen(msg["date"])
-    clear_reminder_sent()
+
+            # -------------------------------------------------
+            # RESET TIMER ONLY WHEN RADHIKA SENDS "I AM QUEEN"
+            # -------------------------------------------------
+            if (
+                user_id == RADHIKA_ID
+                and text
+                and text.strip().lower() == "i am queen"
+            ):
+                save_last_seen(msg["date"])      # Telegram message timestamp
+                clear_reminder_sent()
+                print("👑 Timer reset.")
+
+            # Ignore stickers/photos/etc.
             if not text:
                 continue
+
             reply = handle_message(text, user_id)
-            print("REPLY:", reply)
+
             if reply:
+                print("REPLY:", reply)
                 send_message(chat_id, reply)
 
         check_reminder()
