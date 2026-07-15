@@ -258,28 +258,20 @@ def main():
             name = user.get("first_name")
             print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
 
+            if user_id == RADHIKA_ID:
+                # Use Telegram's own message timestamp, not local processing time,
+                # so last_seen reflects when she actually sent the message.
+                save_last_seen(msg["date"])
+                clear_reminder_sent()
+                print("👑 Queen is active — timer reset and saved to file.")
+
             if not text:
-    continue
+                continue
+            reply = handle_message(text, user_id)
+            print("REPLY:", reply)
+            if reply:
+                send_message(chat_id, reply)
 
-if user_id == RADHIKA_ID:
-    last_message_time = time.time()
-    save_last_seen(last_message_time)
-    clear_reminder_sent()
-    print("👑 Last message from Queen recorded.")
-    print("🕒", time.ctime(last_message_time))
-
-reply = handle_message(text, user_id)
-
-if reply:
-    send_message(chat_id, reply)
-
-if user_id == RADHIKA_ID:
-    last_message_time = time.time()
-    save_last_seen(last_message_time)
-    clear_reminder_sent()
-
-    print("👑 Last message from Queen recorded.")
-    print("🕒", time.ctime(last_message_time))
         check_reminder()
         time.sleep(1)
 
