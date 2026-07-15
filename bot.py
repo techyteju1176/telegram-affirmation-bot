@@ -275,7 +275,7 @@ def main():
                 and text
                 and text.strip().lower() == "i am queen"
             ):
-                save_last_seen(msg["date"])      # Telegram message timestamp
+                save_last_seen(time.time())      # Telegram message timestamp
                 clear_reminder_sent()
                 print("👑 Timer reset.")
 
