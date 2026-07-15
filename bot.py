@@ -264,12 +264,15 @@ def main():
                 print("👑 Queen is active — timer reset and saved to file.")
 
             if not text:
-                continue
-            reply = handle_message(text, user_id)
-            print("REPLY:", reply)
-            if reply:
-                send_message(chat_id, reply)
+    continue
 
+if user_id == RADHIKA_ID:
+    last_message_time = time.time()
+    save_last_seen(last_message_time)
+    clear_reminder_sent()
+
+    print("👑 Last message from Queen recorded.")
+    print("🕒", time.ctime(last_message_time))
         check_reminder()
         time.sleep(1)
 
