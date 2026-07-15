@@ -124,7 +124,7 @@ def handle_message(text, user_id):
             return "💪 You are, Radhika. Your power is quiet, elegant, and absolutely unmatched."
         return "💪 Queen Radhika — her power is quiet, elegant, and absolutely unmatched."
 
-    elif "who is elegant" in        else:
+    elif "who is elegant" in        t:
             return "😌 I'm extremely sorry, but you are not the Queen. You must be the Queen's follower or servant."
 
     elif "who is queen" in t:
