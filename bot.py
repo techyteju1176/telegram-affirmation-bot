@@ -48,20 +48,6 @@ def load_last_seen():
     save_last_seen(ts)
     return ts
 
-# ---- REMINDER SENT FLAG FILE ----
-REMINDER_FLAG_FILE = "reminder_sent.txt"
-
-def is_reminder_sent():
-    return os.path.exists(REMINDER_FLAG_FILE)
-
-def mark_reminder_sent():
-    with open(REMINDER_FLAG_FILE, "w") as f:
-        f.write("1")
-
-def clear_reminder_sent():
-    if os.path.exists(REMINDER_FLAG_FILE):
-        os.remove(REMINDER_FLAG_FILE)
-
 # ---- TELEGRAM FUNCTIONS ----
 def get_updates(offset=None):
     params = {"timeout": 30, "offset": offset}
@@ -91,12 +77,15 @@ REMINDER_DELAY_SECONDS = 5 * 60  # 5 minutes for testing
 def check_reminder():
     last_seen = load_last_seen()
     elapsed = time.time() - last_seen
-    print(f"⏱ Time since Queen last seen: {elapsed/60:.1f} minutes")
-    if elapsed >= REMINDER_DELAY_SECONDS and not is_reminder_sent():
-        print("⏰ Delay passed — sending reminder to Queen in group...")
-        send_message(GROUP_CHAT_ID, random.choice(QUEEN_REMINDERS))
-        mark_reminder_sent()
 
+    print(f"⏱ Time since Queen last seen: {elapsed/60:.1f} minutes")
+
+    if elapsed >= REMINDER_DELAY_SECONDS:
+        print("⏰ Sending reminder...")
+        send_message(GROUP_CHAT_ID, random.choice(QUEEN_REMINDERS))
+
+        # Next reminder 5 min baad
+        save_last_seen(time.time())
 # ---- MESSAGE HANDLER ----
 def handle_message(text, user_id):
     t = text.lower().strip()
