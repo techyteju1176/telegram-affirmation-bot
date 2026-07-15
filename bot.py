@@ -3,6 +3,7 @@ import random
 import time
 import requests
 from dotenv import load_dotenv
+from apscheduler.schedulers.background import BackgroundScheduler
 
 load_dotenv()
 
@@ -236,6 +237,15 @@ def handle_message(text, user_id):
     return None
 
 # ---- MAIN LOOP ----
+scheduler = BackgroundScheduler()
+
+scheduler.add_job(
+    check_reminder,
+    trigger="interval",
+    minutes=10
+)
+
+scheduler.start()
 def main():
     offset = None
     print("✅ Bot is running...")
