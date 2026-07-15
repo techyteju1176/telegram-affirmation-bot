@@ -72,7 +72,7 @@ def send_message(chat_id, text):
 
 # ---- REMINDER CHECK ----
 # ---- REMINDER DELAY (set to 48*60*60 for production, lower for testing) ----
-REMINDER_DELAY_SECONDS = 5 * 60  # 5 minutes for testing
+REMINDER_DELAY_SECONDS = 48 * 60 * 60  # 5 minutes for testing
 
 def check_reminder():
     last_seen = load_last_seen()
