@@ -256,7 +256,7 @@ def main():
             user = msg.get("from", {})
             user_id = user.get("id")
             name = user.get("first_name")
-            print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
+            print(f"CHAT ID: {chat_id} | USER ID: {user_id} | NAME: {name} | TEXT: {text}")
 
             if user_id == RADHIKA_ID and text and "i am queen" in text.lower():
                 # Only saying "I am queen" counts as activity — any other message,
@@ -279,4 +279,3 @@ def main():
 # ---- START ----
 if __name__ == "__main__":
     main()
-
