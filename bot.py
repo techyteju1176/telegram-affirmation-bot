@@ -115,6 +115,12 @@ def handle_message(text, user_id):
         else:
             return "😌 I'm extremely sorry, but you are not the Queen. You must be the Queen's follower or servant."
 
+    # ---- WHO IS QUEEN AND WHY ----
+    elif "who is queen" in t and "why" in t:
+        if is_radhika:
+            return "👑 You are, Radhika. Always have been, always will be.\n\nAnd why? Here's the story:\n\n" + QUEEN_STORY
+        return "👑 Radhika Deshkar — the one and only.\n\nAnd why? Here's the story:\n\n" + QUEEN_STORY
+
     # ---- WHO IS QUEEN ----
     elif "who is queen" in t:
         if is_radhika:
@@ -275,4 +281,3 @@ def main():
 # ---- START ----
 if __name__ == "__main__":
     main()
-
