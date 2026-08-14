@@ -104,9 +104,18 @@ def send_message(chat_id, text):
         print("Error sending message:", e)
 
 # ---- MESSAGE HANDLER ----
-def handle_message(text, user_id):
+def handle_message(text, user_id, name=None):
     t = text.lower().strip()
     is_radhika = (user_id == RADHIKA_ID)
+    caller_name = name or "Someone"
+
+    # ---- SUPERCUTEWOMEN (CALLING RADHIKA) ----
+    if "supercutewomen" in t.replace(" ", "") or "supercutewoman" in t.replace(" ", ""):
+        if is_radhika:
+            return "👑 You called for yourself, Radhika? That's the confidence of a true Queen. 😄"
+        # Notify Radhika directly in her own chat
+        send_message(RADHIKA_ID, f"👑 Queen Radhika, {caller_name} is calling you! 📣")
+        return f"📣 Got it — I've let Queen Radhika know that {caller_name} is calling her!"
 
     # ---- I AM QUEEN ----
     if "i am queen" in t:
@@ -272,7 +281,7 @@ def main():
             print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
             if not text:
                 continue
-            reply = handle_message(text, user_id)
+            reply = handle_message(text, user_id, name)
             print("REPLY:", reply)
             if reply:
                 send_message(chat_id, reply)
