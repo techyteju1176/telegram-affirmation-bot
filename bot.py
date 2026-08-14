@@ -92,11 +92,14 @@ def get_updates(offset=None):
         time.sleep(5)
         return {}
 
-def send_message(chat_id, text):
+def send_message(chat_id, text, parse_mode=None):
     try:
+        payload = {"chat_id": chat_id, "text": text}
+        if parse_mode:
+            payload["parse_mode"] = parse_mode
         res = requests.post(
             URL + "/sendMessage",
-            json={"chat_id": chat_id, "text": text},
+            json=payload,
             timeout=10
         )
         print("SEND STATUS:", res.status_code)
@@ -113,9 +116,8 @@ def handle_message(text, user_id, name=None):
     if "supercutewomen" in t.replace(" ", "") or "supercutewoman" in t.replace(" ", ""):
         if is_radhika:
             return "👑 You called for yourself, Radhika? That's the confidence of a true Queen. 😄"
-        # Notify Radhika directly in her own chat
-        send_message(RADHIKA_ID, f"👑 Queen Radhika, {caller_name} is calling you! 📣")
-        return f"📣 Got it — I've let Queen Radhika know that {caller_name} is calling her!"
+        # Mention her directly in this chat/group
+        return f'👑 <a href="tg://user?id={RADHIKA_ID}">Queen Radhika</a>, {caller_name} is calling you! 📣'
 
     # ---- I AM QUEEN ----
     if "i am queen" in t:
@@ -284,7 +286,7 @@ def main():
             reply = handle_message(text, user_id, name)
             print("REPLY:", reply)
             if reply:
-                send_message(chat_id, reply)
+                send_message(chat_id, reply, parse_mode="HTML")
         time.sleep(1)
 
 # ---- START ----
