@@ -126,7 +126,6 @@ def handle_message(text, user_id, name=None):
         else:
             return "😌 I'm extremely sorry, but you are not the Queen. You must be the Queen's follower or servant."
 
-    # ---- WHO IS QUEEN AND WHY ----
     elif "who is queen" in t and "why" in t:
         if is_radhika:
             return "👑 You are, Radhika. Always have been, always will be.\n\nAnd why? Here's the story:\n\n" + QUEEN_STORY
@@ -142,7 +141,15 @@ def handle_message(text, user_id, name=None):
     elif "why is radhika queen" in t or "why radhika is queen" in t or "what makes radhika" in t or "why is radhika a queen" in t:
         return QUEEN_STORY
 
-    # ---- WHO IS BEAUTIFUL ----
+    # ---- HAPPY INDEPENDENCE DAY ----
+    elif "happy independence day" in t:
+        return (
+            "🇮🇳 Happy Independence Day! 🎉\n\n"
+            "And what is independence?\n\n"
+            "Many women depend on beauty products to feel beautiful. "
+            "Queen Radhika doesn't need any of that — her beauty stands on its own. "
+            "That's real independence. 👑✨"
+        )
     elif "who is beautiful" in t:
         if is_radhika:
             return "✨ You are, Radhika. Effortlessly, undeniably, incomparably beautiful. 💖"
