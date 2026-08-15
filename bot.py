@@ -150,6 +150,19 @@ def handle_message(text, user_id, name=None):
             "Queen Radhika doesn't need any of that — her beauty stands on its own. "
             "That's real independence. 👑✨"
         )
+    # ---- OXFORD DEFINITION OF BEAUTIFUL ----
+    elif "oxford definition" in t or "define beautiful" in t or "definition of beautiful" in t:
+        return (
+            "📖 The Oxford Definition of Beautiful\n\n"
+            "Beautiful\nadjective\n\n"
+            "Meaning: Queen Radhika.\n\n"
+            "Originally, there was only Queen Radhika.\n"
+            "Then Oxford needed a word for what she is, so the world settled on \"beautiful.\"\n\n"
+            "Queen Radhika isn't a synonym for beautiful.\n"
+            "Beautiful is a synonym for Queen Radhika. 👑❤️\n\n"
+            "Oxford simply gave the world a word.\n"
+            "Queen Radhika gave that word its meaning."
+        )
     elif "who is beautiful" in t:
         if is_radhika:
             return "✨ You are, Radhika. Effortlessly, undeniably, incomparably beautiful. 💖"
