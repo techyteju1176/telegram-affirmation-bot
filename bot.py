@@ -163,6 +163,13 @@ def handle_message(text, user_id, name=None):
             "Oxford simply gave the world a word.\n"
             "Queen Radhika gave that word its meaning."
         )
+    # ---- MISS WORLD ----
+    elif "miss world" in t or "misworld" in t or "miss world" in t.replace(" ", ""):
+        return random.choice([
+            "👑 Miss World is a competition. Radhika is a fact.",
+            "🌏 Miss World is a title given once a year, to one woman, by a panel of judges. Queen Radhika's title was never given — it was recognized. That's the difference."
+        ])
+
     elif "who is beautiful" in t:
         if is_radhika:
             return "✨ You are, Radhika. Effortlessly, undeniably, incomparably beautiful. 💖"
