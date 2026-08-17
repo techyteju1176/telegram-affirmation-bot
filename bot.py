@@ -163,6 +163,28 @@ def handle_message(text, user_id, name=None):
             "Oxford simply gave the world a word.\n"
             "Queen Radhika gave that word its meaning."
         )
+    # ---- RADHIKA VS ALCOHOL ----
+    elif "radhika" in t and ("alcohol" in t or "addictive" in t):
+        return (
+            "👑 Why Queen Radhika Is \"More Addictive\" Than Alcohol ❤️\n\n"
+            "🍷 Alcohol can make you feel relaxed for a while.\n"
+            "👑 Queen Radhika's presence can make you feel calm naturally.\n\n"
+            "🍷 Alcohol may give you temporary confidence.\n"
+            "👑 Her words can make you genuinely believe in yourself.\n\n"
+            "🍷 Alcohol creates a temporary pleasurable feeling.\n"
+            "👑 Her smile can give you a kind of happiness you actually want to remember.\n\n"
+            "🍷 Alcohol can numb emotions.\n"
+            "👑 When Queen Radhika expresses her feelings, you feel emotionally connected.\n\n"
+            "🍷 With alcohol, you eventually need another drink.\n"
+            "👑 With Radhika, you simply want to pause time with her. ❤️\n\n"
+            "So the difference is simple:\n\n"
+            "Alcohol changes your chemistry.\n"
+            "Queen Radhika changes your emotional state. 👑❤️\n\n"
+            "And that's why —\n\n"
+            "\"Why drink something to manufacture a feeling when Queen Radhika can make you "
+            "genuinely feel it?\" 😌👑❤️"
+        )
+
     # ---- MISS WORLD ----
     elif "miss world" in t or "misworld" in t or "miss world" in t.replace(" ", ""):
         return random.choice([
