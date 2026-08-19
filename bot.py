@@ -251,6 +251,14 @@ def handle_message(text, user_id, name=None):
             return "🌟 You are, Radhika. A goddess in human form. The universe itself bows to your energy."
         return "🌟 Queen Radhika — a goddess in human form. Worshipped by the universe itself."
 
+    # ---- WHAT'S LUCKIER THAN BEING AROUND THE QUEEN ----
+    elif "luck" in t and ("what" in t or "more" in t):
+        return (
+            "🍀 Being around Queen Radhika is luck. "
+            "Being someone she genuinely cares about, remembers, and chooses to spend her time on — "
+            "that's the rarer kind of luck. Presence is chance. Her attention is a gift. 👑"
+        )
+
     # ---- WHO IS LUCKY ----
     elif "who is lucky" in t:
         if is_radhika:
