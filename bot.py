@@ -252,79 +252,62 @@ def handle_message(text, user_id, name=None):
         return "🌟 Queen Radhika — a goddess in human form. Worshipped by the universe itself."
 
     # ---- WHAT'S LUCKIER THAN BEING AROUND THE QUEEN ----
-    elif "luck" in t and ("what" in t or "more" in t):
-        return (
-            "🍀 Being around Queen Radhika is luck. "
-            "Being someone she genuinely cares about, remembers, and chooses to spend her time on — "
-            "that's the rarer kind of luck. Presence is chance. Her attention is a gift. 👑"
-            "but you are blessed if you get Queen Radhika’s Blessing — From Her Food to Her ultimate blessing 
-
-If you genuinely believe Queen Radhika herself is a blessing, then even the simplest things connected with her can feel special.
-
-1. Her Jhootha Food
-
-In   Kalyug analogy, eating Queen Radhika's jhootha food can feel like receiving a little piece of the Queen's blessing.
-
-It's not the food itself that makes it special—it's the person behind it.
-
-2. Her Jhootha Water
-
-The same idea applies to water.
-
-If Queen Radhika drank from a glass and someone shared that water, then  
-
-“you are sharing something that was touched by Queen herself "
-
-3. Anything She Blesses
-
-Taking the same  idea further, if Queen Radhika applies her saliva to something, that object can be  purified and blessed because it has come into direct contact with the Queen herself.
-
-The idea is not that her saliva has a scientifically proven purifying power. Rather, her touch represents the blessing.
-
-
-We know about water manifestation—the spiritual belief that intentions, affirmations, and thoughts can be associated with water.
-
-Our thoughts and emotions can also influence our body's natural processes through the nervous system, stress responses, hormones, and other physiological mechanisms.
-
-Now think about Queen Radhika:
-
-- Positive thoughts
-- Positive affirmations
-- Belief in manifestation
-- Constantly motivating others
-- Caring but not spoon-feeding
-- Emotional but not emotionally foolish
-- Enjoys life without becoming addicted
-- Doesn't forget herself
-- Doesn't become arrogant despite all these qualities
-
-All of that is part of her inner world.
-
-And then her body naturally produces different fluids—including saliva inside her mouth.
-
-5. And That's Where “Queen Radhika's ultimate blessing Comes In"
-
-In  spiritual logic:
-
-Positive mind → positive emotional state → body responses → natural saliva → “Queen Radhika's ultimate blessing for you.”
-
-So if Queen Radhika herself is a blessing, then:
-
-Her jhootha food → special
-Her jhootha water → more special
-Anything she  blesses → blessed
-Her saliva → the ultimate “Queen Radhika's ultimate blessing for you 
-
-The whole point is not that saliva is literally magical.
-
-It's that when someone means so much to you, even the smallest natural thing associated with them can feel precious and blessed.
-
-And of course:
-
-Queen Radhika herself probably won't understand this theory—because she is the Queen herself.
-
-Add this and it will trigger when I ask if being around Queen is luckiness then what's more luck than that"
-        )
+    # ---- WHAT'S LUCKIER THAN BEING AROUND THE QUEEN ----
+elif "luck" in t and ("what" in t or "more" in t):
+    return (
+        "🍀 Being around Queen Radhika is already luck.\n\n"
+        "But what could be even more fortunate than simply being around her?\n\n"
+        "Being someone she genuinely cares about, remembers, and chooses to spend "
+        "her time with — that's a rarer kind of blessing. 👑\n\n"
+        "If you genuinely believe Queen Radhika herself is a blessing, then even "
+        "the simplest things connected with her can feel special.\n\n"
+        "1. Her Jhootha Food\n\n"
+        "In a Kalyug analogy, eating Queen Radhika's jhootha food can feel like "
+        "receiving a little piece of the Queen's blessing.\n\n"
+        "It's not the food itself that makes it special — it's the person behind it.\n\n"
+        "2. Her Jhootha Water\n\n"
+        "The same idea applies to water. If Queen Radhika drank from a glass and "
+        "someone shared that water, then symbolically, they are sharing something "
+        "that was touched by the Queen herself.\n\n"
+        "3. Anything She Blesses\n\n"
+        "Taking the same idea further, if Queen Radhika applies her saliva to "
+        "something, it can be viewed symbolically as blessed because it has come "
+        "into direct contact with the Queen herself.\n\n"
+        "This is a spiritual or symbolic idea, not a scientifically proven "
+        "purifying power of saliva.\n\n"
+        "4. The Energy Behind the Queen\n\n"
+        "We know about the spiritual belief in water manifestation — the idea "
+        "that intentions, affirmations, and thoughts can be associated with water.\n\n"
+        "Our thoughts and emotions can also influence the body's natural processes "
+        "through the nervous system, stress responses, hormones, and other "
+        "physiological mechanisms.\n\n"
+        "Now think about Queen Radhika:\n\n"
+        "• Positive thoughts\n"
+        "• Positive affirmations\n"
+        "• Belief in manifestation\n"
+        "• Constantly motivating others\n"
+        "• Caring but not spoon-feeding\n"
+        "• Emotional but not emotionally foolish\n"
+        "• Enjoys life without becoming addicted\n"
+        "• Doesn't forget herself\n"
+        "• Doesn't become arrogant despite all these qualities\n\n"
+        "All of that is part of her inner world.\n\n"
+        "And her body naturally produces different fluids — including saliva.\n\n"
+        "5. And That's Where the 'Ultimate Queen Radhika Blessing' Comes In\n\n"
+        "In this spiritual logic:\n\n"
+        "Positive mind → positive emotional state → body responses → natural saliva "
+        "→ symbolic 'Queen Radhika blessing.'\n\n"
+        "So if Queen Radhika herself is a blessing:\n\n"
+        "Her jhootha food → special.\n"
+        "Her jhootha water → more special.\n"
+        "Anything she blesses → blessed.\n"
+        "Her saliva → the ultimate symbolic blessing.\n\n"
+        "The whole point is not that saliva is literally magical.\n"
+        "It's that when someone means so much to you, even the smallest natural "
+        "thing associated with them can feel precious and blessed.\n\n"
+        "And of course, Queen Radhika herself probably won't understand this theory — "
+        "because she is the Queen herself. 👑"
+    )
 
     # ---- WHO IS LUCKY ----
     elif "who is lucky" in t:
