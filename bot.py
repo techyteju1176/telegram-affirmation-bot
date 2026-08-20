@@ -409,8 +409,7 @@ def handle_message(text, user_id, name=None):
             "💎 Rare — truly one of one."
         )
 
-    return None
-     # ---- PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA ----
+    # ---- PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA ----
     elif (
         (("don't know" in t) or ("dont know" in t) or ("do not know" in t))
         and ("queen radhika" in t or "radhika" in t)
@@ -423,7 +422,7 @@ def handle_message(text, user_id, name=None):
             "They simply haven't discovered or understood Queen Radhika yet.\n\n"
             "😌 I feel sorry for them."
         )
- 
+
     return None
  
 # ---- MAIN LOOP ----
