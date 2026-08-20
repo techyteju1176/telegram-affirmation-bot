@@ -411,21 +411,22 @@ def handle_message(text, user_id, name=None):
 
     return None
    
+       # PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA
     elif (
-        ("don't know" in t or "dont know" in t or "do not know" in t)
+        (("don't know" in t) or ("dont know" in t) or ("do not know" in t))
         and ("queen radhika" in t or "radhika" in t)
     ) or (
-        ("don't understand" in t or "dont understand" in t or "do not understand" in t)
+        (("don't understand" in t) or ("dont understand" in t) or ("do not understand" in t))
         and ("queen radhika" in t or "radhika" in t)
     ):
-
         return (
-            "👑 We call them **The Unenlightened**.\n\n"
-            "They simply haven't discovered or understood the "
-            "Queen Radhika phenomenon yet.\n\n"
-            "And honestly...\n\n"
+            "👑 We call them <b>The Unenlightened</b>.\n\n"
+            "They simply haven't discovered or understood Queen Radhika yet.\n\n"
             "😌 I feel sorry for them."
-        )# ---- MAIN LOOP ----
+        )
+
+    return None 
+# ---- MAIN LOOP ----
 def main():
     offset = None
     print("✅ Bot is running...")
