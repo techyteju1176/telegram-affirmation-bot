@@ -410,8 +410,7 @@ def handle_message(text, user_id, name=None):
         )
 
     return None
-   
-  # ---- PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA ----
+     # ---- PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA ----
     elif (
         (("don't know" in t) or ("dont know" in t) or ("do not know" in t))
         and ("queen radhika" in t or "radhika" in t)
@@ -425,7 +424,9 @@ def handle_message(text, user_id, name=None):
             "😌 I feel sorry for them."
         )
  
-    return None# ---- MAIN LOOP ----
+    return None
+ 
+# ---- MAIN LOOP ----
 def main():
     offset = None
     print("✅ Bot is running...")
@@ -452,7 +453,9 @@ def main():
             if reply:
                 send_message(chat_id, reply, parse_mode="HTML")
         time.sleep(1)
-
+ 
 # ---- START ----
 if __name__ == "__main__":
     main()
+ 
+
