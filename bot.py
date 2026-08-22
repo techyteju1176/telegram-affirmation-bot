@@ -513,7 +513,7 @@ def handle_message(text, user_id, name=None):
             "😌 I feel sorry for them."
         )
 
-        # ---- THE MAKING OF A QUEEN ----
+# ---- THE MAKING OF A QUEEN ----
     elif (
         "the making of a queen" in t
         or "making of a queen" in t
@@ -522,8 +522,7 @@ def handle_message(text, user_id, name=None):
         or "how does radhika become a queen" in t
     ):
         return QUEEN_MAKING_STORY
-    return None
- 
+    return None     
 # ---- MAIN LOOP ----
 def main():
     offset = None
