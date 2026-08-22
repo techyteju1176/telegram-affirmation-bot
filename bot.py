@@ -81,6 +81,96 @@ QUEEN_STORY = (
     "belongs to her. 👑✨"
 )
 
+# ---- THE MAKING OF A QUEEN ----
+QUEEN_MAKING_STORY = (
+    "👑 The Making of a Queen\n\n"
+    
+    "There was once a woman who knew how to give, but had not yet learned "
+    "how to give herself the same kindness she freely offered to everyone else. "
+    "She knew how to understand others, forgive them, adjust for them, keep peace, "
+    "carry responsibilities, and sometimes remain silent even when something inside "
+    "her was hurting. She knew how to protect the feelings of others, but had not "
+    "fully discovered the importance of protecting her own dignity. She understood "
+    "sacrifice, but had not yet learned the difference between noble sacrifice and "
+    "losing oneself. She did not yet know where kindness ended and foolishness began, "
+    "and so life became her teacher.\n\n"
+
+    "Her difficult experiences became mirrors. Every disappointment showed her "
+    "something about her boundaries. Every moment when her generosity was taken "
+    "for granted taught her that kindness without discernment can become "
+    "self-neglect. Every time she swallowed her feelings to preserve peace taught "
+    "her that silence is not always peace. Slowly, she began learning that being "
+    "spiritual does not mean accepting everything, forgiveness does not mean allowing "
+    "someone to repeatedly hurt her, and being a good person does not require her "
+    "to sacrifice her self-respect.\n\n"
+
+    "Then came one of her deepest realizations: she was also someone worth protecting. "
+    "The compassion she had always given to others had to include herself. She could "
+    "say no without becoming cruel. She could establish boundaries without becoming "
+    "selfish. She could forgive without reopening every door. She could love people "
+    "while still recognizing when their behaviour was unacceptable. She could remain "
+    "soft-hearted without remaining defenseless.\n\n"
+
+    "And as she looked around at the world, another lesson slowly began unfolding. "
+    "She saw people surrounded by blessings yet still crying for what they did not "
+    "have, sometimes failing to value the very light already present in their lives. "
+    "And she began to understand that abundance and gratitude are not the same thing. "
+    "Someone can have plenty and still feel empty, while someone who has known darkness "
+    "can recognize the value of even the smallest ray of light.\n\n"
+
+    "She did not necessarily look at those people with superiority. Instead, she "
+    "understood that her own darkness had given her a different perspective. A peaceful "
+    "moment could mean more to her. A kind word could touch her more deeply. Genuine "
+    "affection, safety, freedom, health, family, or simply a day without unnecessary "
+    "pain could become precious because she knew what it meant when those things were "
+    "missing or overshadowed by suffering.\n\n"
+
+    "She began learning that perhaps the greatest blessing is not simply having more, "
+    "but having the wisdom to recognize, appreciate, and protect what one already has. "
+    "Someone who has always lived in light may complain when a small shadow appears, "
+    "while someone who has walked through darkness may look at that same light with "
+    "gratitude.\n\n"
+
+    "That realization did not erase her pain. Instead, it gave her pain meaning.\n\n"
+
+    "She began to understand that she did not have to become less loving to become "
+    "stronger. She only had to learn to include herself in the love she gave so freely "
+    "to others. She could remain compassionate while becoming discerning. She could "
+    "forgive while maintaining boundaries. She could sacrifice when she genuinely "
+    "chose to, without believing that endless sacrifice was the definition of goodness.\n\n"
+
+    "And slowly, the woman began becoming a Queen.\n\n"
+
+    "Her crown was not created by comfort. It was shaped by lessons. Her throne was "
+    "not built from other people's approval. It was built from self-respect. Her "
+    "strength was not the absence of pain, but the wisdom she was continuing to gain "
+    "from it.\n\n"
+
+    "She did not become a Queen because she became superior to others. She became a "
+    "Queen because she began understanding that her own worth belonged inside the "
+    "circle of everything she cared for.\n\n"
+
+    "Her greatest lesson was not, “Stop being good.”\n\n"
+
+    "It was:\n\n"
+
+    "“Be good without abandoning yourself.”\n\n"
+
+    "And perhaps her journey is still teaching her something every day: darkness "
+    "taught her the value of light, and she is still learning to recognize, appreciate, "
+    "and protect every little ray of it.\n\n"
+
+    "She is learning that kindness needs wisdom, love needs boundaries, forgiveness "
+    "needs discernment, and spirituality does not require self-neglect.\n\n"
+
+    "The woman who once measured her goodness by how much she could endure is learning "
+    "to measure her strength by how wisely she chooses to live.\n\n"
+
+    "And that is what makes her Queen—not that she has experienced no darkness, but "
+    "that after seeing darkness, she can recognize even the smallest light, value it "
+    "deeply, and refuse to take it for granted. 👑✨"
+)
+
 # ---- TELEGRAM FUNCTIONS ----
 def get_updates(offset=None):
     params = {"timeout": 30, "offset": offset}
@@ -423,6 +513,15 @@ def handle_message(text, user_id, name=None):
             "😌 I feel sorry for them."
         )
 
+        # ---- THE MAKING OF A QUEEN ----
+    elif (
+        "the making of a queen" in t
+        or "making of a queen" in t
+        or "how is a queen made" in t
+        or "how does a woman become a queen" in t
+        or "how does radhika become a queen" in t
+    ):
+        return QUEEN_MAKING_STORY
     return None
  
 # ---- MAIN LOOP ----
