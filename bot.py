@@ -183,19 +183,98 @@ def get_updates(offset=None):
         return {}
 
 def send_message(chat_id, text, parse_mode=None):
-    try:
-        payload = {"chat_id": chat_id, "text": text}
-        if parse_mode:
-            payload["parse_mode"] = parse_mode
-        res = requests.post(
-            URL + "/sendMessage",
-            json=payload,
-            timeout=10
-        )
-        print("SEND STATUS:", res.status_code)
-    except Exception as e:
-        print("Error sending message:", e)
+    MAX_LENGTH = 4000
 
+    # If message is short enough, send normally
+    if len(text) <= MAX_LENGTH:
+        try:
+            payload = {
+                "chat_id": chat_id,
+                "text": text
+            }
+
+            if parse_mode:
+                payload["parse_mode"] = parse_mode
+
+            res = requests.post(
+                URL + "/sendMessage",
+                json=payload,
+                timeout=10
+            )
+
+            print("SEND STATUS:", res.status_code)
+
+            if res.status_code != 200:
+                print("TELEGRAM ERROR:", res.text)
+
+        except Exception as e:
+            print("Error sending message:", e)
+
+        return
+
+    # ---- SPLIT LONG MESSAGE ----
+    parts = []
+    current = ""
+
+    # First try to split naturally at paragraphs
+    paragraphs = text.split("\n\n")
+
+    for paragraph in paragraphs:
+
+        # If adding this paragraph keeps us under the limit
+        if len(current) + len(paragraph) + 2 <= MAX_LENGTH:
+            if current:
+                current += "\n\n"
+            current += paragraph
+
+        else:
+            # Save current part
+            if current:
+                parts.append(current)
+                current = ""
+
+            # If one paragraph itself is too long,
+            # split it into smaller pieces
+            while len(paragraph) > MAX_LENGTH:
+                parts.append(paragraph[:MAX_LENGTH])
+                paragraph = paragraph[MAX_LENGTH:]
+
+            current = paragraph
+
+    # Add remaining text
+    if current:
+        parts.append(current)
+
+    # Send each part
+    for i, part in enumerate(parts, start=1):
+        try:
+            payload = {
+                "chat_id": chat_id,
+                "text": part
+            }
+
+            if parse_mode:
+                payload["parse_mode"] = parse_mode
+
+            res = requests.post(
+                URL + "/sendMessage",
+                json=payload,
+                timeout=10
+            )
+
+            print(
+                f"SEND PART {i}/{len(parts)} STATUS:",
+                res.status_code
+            )
+
+            if res.status_code != 200:
+                print("TELEGRAM ERROR:", res.text)
+
+            # Small delay between messages
+            time.sleep(0.5)
+
+        except Exception as e:
+            print(f"Error sending part {i}:", e)
 # ---- MESSAGE HANDLER ----
 def handle_message(text, user_id, name=None):
     t = text.lower().strip()
