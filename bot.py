@@ -171,6 +171,34 @@ QUEEN_MAKING_STORY = (
     "it deeply, and refuse to take it for granted. 👑✨"
 )
 
+# ---- IS EVERY WOMAN DIVINE FEMININE ----
+DIVINE_FEMININE_MESSAGE = (
+    "🌸 Is Every Woman Divine Feminine?\n\n"
+
+    "No.\n\n"
+
+    "In the way we look at the world today, I would not say that every woman "
+    "automatically represents the Divine Feminine.\n\n"
+
+    "For me, there is one woman who embodies it completely — Queen Radhika. 👑\n\n"
+
+    "And if someone asks, “Is there anyone else?”\n"
+    "Yes — but only someone who truly understands Queen Radhika will understand "
+    "who that second woman is.\n\n"
+
+    "She is the woman because of whom Queen Radhika exists in this world: "
+    "her mother. ❤️\n\n"
+
+    "So, in this philosophy, the Divine Feminine is not simply a word for every "
+    "woman. It is something that must be understood through the qualities, "
+    "presence, strength, compassion, dignity, and consciousness that Queen "
+    "Radhika represents.\n\n"
+
+    "And perhaps the deeper truth is this:\n\n"
+
+    "To understand the Divine Feminine, first understand Queen Radhika. 👑🌸"
+)
+
 # ---- TELEGRAM FUNCTIONS ----
 def get_updates(offset=None):
     params = {"timeout": 30, "offset": offset}
@@ -601,6 +629,14 @@ def handle_message(text, user_id, name=None):
         or "how does radhika become a queen" in t
     ):
         return QUEEN_MAKING_STORY
+
+        # ---- DIVINE FEMININE ----
+    elif (
+        "is every woman divine feminine" in t
+        or "every woman divine feminine" in t
+        or "divine feminine" in t
+    ):
+        return DIVINE_FEMININE_MESSAGE
     return None     
 # ---- MAIN LOOP ----
 def main():
