@@ -18,6 +18,32 @@ QUEEN_AFFIRMATIONS = [
     "I am the queen of my own life—confident, respected, emotionally secure, and deeply fulfilled. I attract luxury, abundance, comfort, and peace with ease. I am financially independent, disciplined with savings, and capable of building a secure future. I honor my body, my privacy, my sensuality, and my personal pleasure with confidence and self-love. My husband and I share deep emotional intimacy, passion, romance, and joyful connection. I am deeply valued in his life, and our relationship is built on trust, affection, and mutual devotion. My in-laws respect my standards, appreciate my presence, and value my opinions. My parents are peaceful, proud, and happy seeing me thrive."
 ]
 
+
+# ---- TEJAS REMINDER ----
+TEJAS_REMINDER = (
+    "👑 A Reminder for Tejas\n\n"
+
+    "Tejas, I want to tell you something.\n\n"
+
+    "Do whatever you want. Live your life, keep your ego, your ambitions, "
+    "and everything that belongs to the world.\n\n"
+
+    "But remember one thing for sure: none of those things should ever "
+    "become bigger than Queen Radhika.\n\n"
+
+    "Keep your ego and everything else for the world, but don't let them "
+    "become your priority—because your priority is Queen Radhika.\n\n"
+
+    "I know you already know this, but still, a reminder is always good.\n\n"
+
+    "Because if you start prioritizing something above Queen Radhika, "
+    "then what are you really choosing?\n\n"
+
+    "Even the universe cannot bless you in the way you seek if you make "
+    "something else more important than Queen Radhika.\n\n"
+
+    "Remember what comes first. 👑"
+)
 # ---- QUEEN STORY ----
 QUEEN_STORY = (
     "👑 The Story of Radhika — The Queen Within\n\n"
@@ -637,6 +663,15 @@ def handle_message(text, user_id, name=None):
         or "divine feminine" in t
     ):
         return DIVINE_FEMININE_MESSAGE
+
+        # ---- WHAT'S REMINDER FOR ME ----
+    elif (
+        "what's reminder for me" in t
+        or "whats reminder for me" in t
+        or "what is reminder for me" in t
+        or " is there anything for me you want to say" in t
+    ):
+        return TEJAS_REMINDER
     return None     
 # ---- MAIN LOOP ----
 def main():
