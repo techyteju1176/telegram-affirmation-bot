@@ -64,6 +64,14 @@ TRUE_LOVE_MESSAGE = (
     "It isn’t about possessing her — it’s about respecting, supporting, understanding, "
     "and valuing the woman behind the Queen. ❤️"
 )
+# ---- QUEEN KNOWS THE PATH ----
+QUEEN_PATH_MESSAGE = (
+    "👑 Tejas \n\n"
+    "No, you won't. QUEEN will know. ❤️\n\n"
+    "And if you ever get lost from the path, "
+    "she will tell you and guide you back.\n\n"
+    "Agree, QUEEN? 👑"
+)
 
 
 # ============================================================
@@ -1052,6 +1060,13 @@ def handle_message(text, user_id, name=None):
         )
 
 
+        # ---- QUEEN KNOWS THE PATH ----
+    elif (
+        "how will i know i'm doing that" in t
+        or "how will i know im doing that" in t
+        or "how will i know" in t
+    ):
+        return QUEEN_PATH_MESSAGE
     # ========================================================
     # THE MAKING OF A QUEEN
     # ========================================================
