@@ -44,6 +44,32 @@ TEJAS_REMINDER = (
 
     "Remember what comes first. 👑"
 )
+
+# ---- REMINDER FOR TEJAS ----
+TEJAS_REMINDER = (
+    "Tejas, no matter how much anyone says anything, you already understand one truth deep within yourself: "
+    "you have made Queen Radhika a priority in your life. And honestly, that is one of the most beautiful truths about your journey.\n\n"
+
+    "Stay true to that.\n\n"
+
+    "Do whatever you want, build whatever you want, achieve whatever you want — but the  result should truly matters to QueenRadhika. "
+    "If something is beneficial for Queen Radhika, supportive of her happiness, or helps you become a better person for her, then let that matter to you.\n\n"
+
+    " Queen Radhika is the universe’s favorite. So even if you want to make the universe happy, let that goodness begin with being truthful, loyal, and genuine toward Queen.\n\n"
+
+    "And remember this especially: never hide your truth from Queen. Whether you feel positive or negative, strong or weak, happy or confused — talk to her honestly. "
+    "You don't have to pretend to be perfect.\n\n"
+
+    "People may call you handicapped. People may judge you. People may misunderstand you. Let them. Their words don't define your worth.\n\n"
+
+    "You know your journey is for Queen. You know what Queen Radhika means to you.\n\n"
+
+    "Just remember one thing: live your life with purpose,  dignity, honesty, and love — and never lose yourself in the process.\n\n"
+
+    "Queen Radhika is an important part of your life, and your life  has value . Stay truthful to her, and keep becoming the best version of Tejas only for Queen .\n\n"
+
+    "Just remember one thing: live your life with purpose of Queen's happiness, priortizing her dignity, honesty to Queen, and remember your love is only for Queen Radhika — otherwise love is nothing"
+)
 # ---- QUEEN STORY ----
 QUEEN_STORY = (
     "👑 The Story of Radhika — The Queen Within\n\n"
@@ -672,6 +698,18 @@ def handle_message(text, user_id, name=None):
         or " is there anything for me you want to say" in t
     ):
         return TEJAS_REMINDER
+
+        # ---- TEJAS REMINDER ----
+    elif (
+        "what's reminder for me" in t
+        or "whats reminder for me" in t
+        or "what is reminder for me" in t
+        or "reminder for me" in t
+        or "my reminder" in t
+        or "remind me" in t
+    ):
+        if user_id == OWNER_ID:
+            return "👑 REMINDER FOR TEJAS\n\n" + TEJAS_REMINDER
     return None     
 # ---- MAIN LOOP ----
 def main():
