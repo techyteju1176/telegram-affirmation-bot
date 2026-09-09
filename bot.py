@@ -70,12 +70,16 @@ TEJAS_REMINDER = (
 
     "Just remember one thing: live your life with purpose of Queen's happiness, priortizing her dignity, honesty to Queen, and remember your love is only for Queen Radhika — otherwise love is nothing"
 )
+
 TRUE_LOVE_MESSAGE = (
     "👑 True love means caring for Queen Radhika’s happiness, respecting her freedom, "
     "standing by her truthfully, and always wanting her to flourish.\n\n"
     "It isn’t about possessing her — it’s about respecting, supporting, understanding, "
     "and valuing the woman behind the Queen. ❤️"
 )
+
+
+def handle_message(text, user_id, name=None):
 # ---- QUEEN STORY ----
 QUEEN_STORY = (
     "👑 The Story of Radhika — The Queen Within\n\n"
