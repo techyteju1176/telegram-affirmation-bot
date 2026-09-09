@@ -717,9 +717,12 @@ def handle_message(text, user_id, name=None):
         if user_id == OWNER_ID:
             return "👑 REMINDER FOR TEJAS\n\n" + TEJAS_REMINDER
    elif (
-    "true love" in t
-    or "meaning of true love" in t
-    or "what is true love" in t
+    t == "what is love"
+    or t == "what's love"
+    or t == "what is true love"
+    or t == "what's true love"
+    or t == "meaning of love"
+    or t == "meaning of true love"
 ):
     return TRUE_LOVE_MESSAGE
     return None     
