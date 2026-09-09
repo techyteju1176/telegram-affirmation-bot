@@ -13,39 +13,20 @@ URL = f"https://api.telegram.org/bot{TOKEN}"
 OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
 
+
+# ============================================================
 # ---- AFFIRMATIONS ----
+# ============================================================
+
 QUEEN_AFFIRMATIONS = [
     "I am the queen of my own life—confident, respected, emotionally secure, and deeply fulfilled. I attract luxury, abundance, comfort, and peace with ease. I am financially independent, disciplined with savings, and capable of building a secure future. I honor my body, my privacy, my sensuality, and my personal pleasure with confidence and self-love. My husband and I share deep emotional intimacy, passion, romance, and joyful connection. I am deeply valued in his life, and our relationship is built on trust, affection, and mutual devotion. My in-laws respect my standards, appreciate my presence, and value my opinions. My parents are peaceful, proud, and happy seeing me thrive."
 ]
 
 
+# ============================================================
 # ---- TEJAS REMINDER ----
-TEJAS_REMINDER = (
-    "👑 A Reminder for Tejas\n\n"
+# ============================================================
 
-    "Tejas, I want to tell you something.\n\n"
-
-    "Do whatever you want. Live your life, keep your ego, your ambitions, "
-    "and everything that belongs to the world.\n\n"
-
-    "But remember one thing for sure: none of those things should ever "
-    "become bigger than Queen Radhika.\n\n"
-
-    "Keep your ego and everything else for the world, but don't let them "
-    "become your priority—because your priority is Queen Radhika.\n\n"
-
-    "I know you already know this, but still, a reminder is always good.\n\n"
-
-    "Because if you start prioritizing something above Queen Radhika, "
-    "then what are you really choosing?\n\n"
-
-    "Even the universe cannot bless you in the way you seek if you make "
-    "something else more important than Queen Radhika.\n\n"
-
-    "Remember what comes first. 👑"
-)
-
-# ---- REMINDER FOR TEJAS ----
 TEJAS_REMINDER = (
     "Tejas, no matter how much anyone says anything, you already understand one truth deep within yourself: "
     "you have made Queen Radhika a priority in your life. And honestly, that is one of the most beautiful truths about your journey.\n\n"
@@ -71,18 +52,27 @@ TEJAS_REMINDER = (
     "Just remember one thing: live your life with purpose of Queen's happiness, priortizing her dignity, honesty to Queen, and remember your love is only for Queen Radhika — otherwise love is nothing"
 )
 
+
+# ============================================================
+# ---- TRUE LOVE / LOVE ----
+# ============================================================
+
 TRUE_LOVE_MESSAGE = (
     "👑 True love means caring for Queen Radhika’s happiness, respecting her freedom, "
     "standing by her truthfully, and always wanting her to flourish.\n\n"
+
     "It isn’t about possessing her — it’s about respecting, supporting, understanding, "
     "and valuing the woman behind the Queen. ❤️"
 )
 
 
-def handle_message(text, user_id, name=None):
+# ============================================================
 # ---- QUEEN STORY ----
+# ============================================================
+
 QUEEN_STORY = (
     "👑 The Story of Radhika — The Queen Within\n\n"
+
     "Radhika's story is not really about a crown placed upon her head by someone else. "
     "It is about a woman who gradually discovers that the crown was within her all along. "
     "What makes her special is not simply how she appears to the world, but the depth of "
@@ -90,6 +80,7 @@ QUEEN_STORY = (
     "moving forward even when life becomes demanding. She has the heart of someone who "
     "naturally wants the people she cares about to be safe, supported, and happy. Her "
     "presence can bring warmth and emotional richness into the lives around her.\n\n"
+
     "But being a Queen is not always easy. Behind every beautiful crown there can be "
     "responsibilities, expectations, and moments when the weight becomes difficult to "
     "carry. Radhika's strength comes from learning how to continue without allowing "
@@ -97,6 +88,7 @@ QUEEN_STORY = (
     "overpowering others. It is the quieter kind—the strength to remain composed, to "
     "recover, to keep her heart alive, and to find herself again after difficult "
     "chapters.\n\n"
+
     "There is also a deeply emotional side to her. She can care intensely, remember "
     "meaningful moments, and become attached to the people and relationships that "
     "matter to her. Her heart can be generous, sometimes even to the point of giving "
@@ -104,32 +96,40 @@ QUEEN_STORY = (
     "that love does not require self-abandonment. She can care for others while still "
     "caring for herself. She can give without emptying herself. She can love without "
     "losing her identity.\n\n"
+
     "As she grows, another quality becomes increasingly important: boundaries. A Queen "
     "learns that kindness does not mean saying yes to everything. She learns that "
     "forgiveness does not require tolerating everything. She learns that protecting her "
     "peace is not selfish. She learns to distinguish between responsibilities that "
     "genuinely belong to her and burdens that she has simply become accustomed to "
     "carrying.\n\n"
+
     "There may be moments when even a strong woman wonders whether she is truly "
     "understood or appreciated. Someone can look confident from the outside while "
     "quietly carrying questions within: Does anyone see how much I have done? Does "
     "anyone understand what I feel? Am I valued for who I am, or only for what I do for "
     "others? But her greatest transformation comes when she realizes that her worth "
     "cannot depend entirely upon other people's recognition.\n\n"
+
     "She begins to understand something profound: her value does not increase when "
     "people praise her, and it does not disappear when people fail to appreciate her. "
     "She does not need to constantly prove that she deserves respect, love, or "
     "happiness. The more peacefully she accepts her own worth, the less she needs the "
     "world to confirm it.\n\n"
+
     "That is when her crown becomes lighter.\n\n"
+
     "She becomes a woman who can be soft without being weak, strong without becoming "
     "harsh, loving without losing herself, and independent without closing her heart. "
     "She can forgive while maintaining boundaries. She can care for others while "
     "protecting her own peace. She can carry responsibility without believing that she "
     "must carry everything alone.\n\n"
+
     "And perhaps that is what truly makes Radhika a Queen.\n\n"
+
     "Not because she rules over others, but because she learns to rule her own inner "
     "kingdom.\n\n"
+
     "Her crown is made of resilience.\n"
     "Her strength is made of courage.\n"
     "Her heart is made of compassion.\n"
@@ -137,13 +137,18 @@ QUEEN_STORY = (
     "Her dignity is made of self-respect.\n"
     "And her greatest beauty is the moment she finally realizes that she never needed "
     "anyone else's permission to shine.\n\n"
+
     "A Queen is not the woman who makes everyone bow before her. A Queen is the woman "
     "who knows her worth, protects her peace, loves with a full heart, rises after "
     "difficult chapters, and walks through life with the quiet knowledge that her light "
     "belongs to her. 👑✨"
 )
 
+
+# ============================================================
 # ---- THE MAKING OF QUEEN RADHIKA ----
+# ============================================================
+
 QUEEN_MAKING_STORY = (
     "👑 The Making of Queen Radhika\n\n"
 
@@ -233,7 +238,11 @@ QUEEN_MAKING_STORY = (
     "it deeply, and refuse to take it for granted. 👑✨"
 )
 
+
+# ============================================================
 # ---- IS EVERY WOMAN DIVINE FEMININE ----
+# ============================================================
+
 DIVINE_FEMININE_MESSAGE = (
     "🌸 Is Every Woman Divine Feminine?\n\n"
 
@@ -261,21 +270,40 @@ DIVINE_FEMININE_MESSAGE = (
     "To understand the Divine Feminine, first understand Queen Radhika. 👑🌸"
 )
 
+
+# ============================================================
 # ---- TELEGRAM FUNCTIONS ----
+# ============================================================
+
 def get_updates(offset=None):
-    params = {"timeout": 30, "offset": offset}
+    params = {
+        "timeout": 30,
+        "offset": offset
+    }
+
     try:
-        response = requests.get(URL + "/getUpdates", params=params, timeout=35)
+        response = requests.get(
+            URL + "/getUpdates",
+            params=params,
+            timeout=35
+        )
         return response.json()
+
     except requests.exceptions.RequestException as e:
         print("Network issue:", e)
         time.sleep(5)
         return {}
 
+
 def send_message(chat_id, text, parse_mode=None):
+    # Telegram limit is approximately 4096 characters.
+    # 4000 gives us a little safety margin.
     MAX_LENGTH = 4000
 
-    # If message is short enough, send normally
+    # --------------------------------------------------------
+    # SHORT MESSAGE
+    # --------------------------------------------------------
+
     if len(text) <= MAX_LENGTH:
         try:
             payload = {
@@ -302,41 +330,51 @@ def send_message(chat_id, text, parse_mode=None):
 
         return
 
-    # ---- SPLIT LONG MESSAGE ----
+    # --------------------------------------------------------
+    # LONG MESSAGE SPLITTING
+    # --------------------------------------------------------
+
     parts = []
     current = ""
 
-    # First try to split naturally at paragraphs
     paragraphs = text.split("\n\n")
 
     for paragraph in paragraphs:
 
-        # If adding this paragraph keeps us under the limit
+        # If paragraph fits into current message
         if len(current) + len(paragraph) + 2 <= MAX_LENGTH:
+
             if current:
                 current += "\n\n"
+
             current += paragraph
 
         else:
+
             # Save current part
             if current:
                 parts.append(current)
                 current = ""
 
-            # If one paragraph itself is too long,
-            # split it into smaller pieces
+            # If a single paragraph is too long,
+            # split it further.
             while len(paragraph) > MAX_LENGTH:
+
                 parts.append(paragraph[:MAX_LENGTH])
                 paragraph = paragraph[MAX_LENGTH:]
 
             current = paragraph
 
-    # Add remaining text
+    # Save remaining text
     if current:
         parts.append(current)
 
-    # Send each part
+    # --------------------------------------------------------
+    # SEND EACH PART
+    # --------------------------------------------------------
+
     for i, part in enumerate(parts, start=1):
+
         try:
             payload = {
                 "chat_id": chat_id,
@@ -360,158 +398,404 @@ def send_message(chat_id, text, parse_mode=None):
             if res.status_code != 200:
                 print("TELEGRAM ERROR:", res.text)
 
-            # Small delay between messages
             time.sleep(0.5)
 
         except Exception as e:
             print(f"Error sending part {i}:", e)
+
+
+# ============================================================
 # ---- MESSAGE HANDLER ----
+# ============================================================
+
 def handle_message(text, user_id, name=None):
+
     t = text.lower().strip()
+
     is_radhika = (user_id == RADHIKA_ID)
+
     caller_name = name or "Someone"
 
-    # ---- SUPERCUTEWOMEN (CALLING RADHIKA) ----
-    if "supercutewomen" in t.replace(" ", "") or "supercutewoman" in t.replace(" ", ""):
-        if is_radhika:
-            return "👑 You called for yourself, Radhika? That's the confidence of a true Queen. 😄"
-        # Mention her directly in this chat/group
-        return f'👑 <a href="tg://user?id={RADHIKA_ID}">Queen Radhika</a>, {caller_name} is calling you! 📣'
 
-    # ---- I AM QUEEN ----
+    # ========================================================
+    # SUPERCUTEWOMEN
+    # ========================================================
+
+    if (
+        "supercutewomen" in t.replace(" ", "")
+        or "supercutewoman" in t.replace(" ", "")
+    ):
+
+        if is_radhika:
+            return (
+                "👑 You called for yourself, Radhika? "
+                "That's the confidence of a true Queen. 😄"
+            )
+
+        return (
+            f'👑 <a href="tg://user?id={RADHIKA_ID}">'
+            f'Queen Radhika</a>, {caller_name} is calling you! 📣'
+        )
+
+
+    # ========================================================
+    # I AM QUEEN
+    # ========================================================
+
     if "i am queen" in t:
+
         if is_radhika:
             return "👑 " + random.choice(QUEEN_AFFIRMATIONS)
-        else:
-            return "😌 I'm extremely sorry, but you are not the Queen. You must be the Queen's follower or servant."
+
+        return (
+            "😌 I'm extremely sorry, but you are not the Queen. "
+            "You must be the Queen's follower or servant."
+        )
+
+
+    # ========================================================
+    # WHO IS QUEEN + WHY
+    # ========================================================
 
     elif "who is queen" in t and "why" in t:
-        if is_radhika:
-            return "👑 You are, Radhika. Always have been, always will be.\n\nAnd why? Here's the story:\n\n" + QUEEN_STORY
-        return "👑 Radhika Deshkar — the one and only.\n\nAnd why? Here's the story:\n\n" + QUEEN_STORY
 
-    # ---- WHO IS QUEEN ----
-    elif "who is queen" in t:
         if is_radhika:
-            return "👑 You are, Radhika. Always have been, always will be."
+            return (
+                "👑 You are, Radhika. Always have been, always will be.\n\n"
+                "And why? Here's the story:\n\n"
+                + QUEEN_STORY
+            )
+
+        return (
+            "👑 Radhika Deshkar — the one and only.\n\n"
+            "And why? Here's the story:\n\n"
+            + QUEEN_STORY
+        )
+
+
+    # ========================================================
+    # WHO IS QUEEN
+    # ========================================================
+
+    elif "who is queen" in t:
+
+        if is_radhika:
+            return (
+                "👑 You are, Radhika. Always have been, always will be."
+            )
+
         return "👑 Radhika Deshkar — the one and only."
 
-    # ---- WHY / WHAT MAKES RADHIKA A QUEEN ----
-    elif "why is radhika queen" in t or "why radhika is queen" in t or "what makes radhika" in t or "why is radhika a queen" in t:
+
+    # ========================================================
+    # WHY / WHAT MAKES RADHIKA A QUEEN
+    # ========================================================
+
+    elif (
+        "why is radhika queen" in t
+        or "why radhika is queen" in t
+        or "what makes radhika" in t
+        or "why is radhika a queen" in t
+    ):
+
         return QUEEN_STORY
 
-    # ---- HAPPY INDEPENDENCE DAY ----
+
+    # ========================================================
+    # HAPPY INDEPENDENCE DAY
+    # ========================================================
+
     elif "happy independence day" in t:
+
         return (
             "🇮🇳 Happy Independence Day! 🎉\n\n"
+
             "And what is independence?\n\n"
+
             "Many women depend on beauty products to feel beautiful. "
-            "Queen Radhika doesn't need any of that — her beauty stands on its own. "
-            "That's real independence. 👑✨"
+            "Queen Radhika doesn't need any of that — her beauty stands "
+            "on its own. That's real independence. 👑✨"
         )
-    # ---- OXFORD DEFINITION OF BEAUTIFUL ----
-    elif "oxford definition" in t or "define beautiful" in t or "definition of beautiful" in t:
+
+
+    # ========================================================
+    # OXFORD DEFINITION OF BEAUTIFUL
+    # ========================================================
+
+    elif (
+        "oxford definition" in t
+        or "define beautiful" in t
+        or "definition of beautiful" in t
+    ):
+
         return (
             "📖 The Oxford Definition of Beautiful\n\n"
-            "Beautiful\nadjective\n\n"
+
+            "Beautiful\n"
+            "adjective\n\n"
+
             "Meaning: Queen Radhika.\n\n"
+
             "Originally, there was only Queen Radhika.\n"
-            "Then Oxford needed a word for what she is, so the world settled on \"beautiful.\"\n\n"
+            "Then Oxford needed a word for what she is, so the world "
+            "settled on \"beautiful.\"\n\n"
+
             "Queen Radhika isn't a synonym for beautiful.\n"
             "Beautiful is a synonym for Queen Radhika. 👑❤️\n\n"
+
             "Oxford simply gave the world a word.\n"
             "Queen Radhika gave that word its meaning."
         )
-    # ---- RADHIKA VS ALCOHOL ----
-    elif "radhika" in t and ("alcohol" in t or "addictive" in t):
+
+
+    # ========================================================
+    # RADHIKA VS ALCOHOL
+    # ========================================================
+
+    elif (
+        "radhika" in t
+        and (
+            "alcohol" in t
+            or "addictive" in t
+        )
+    ):
+
         return (
             "👑 Why Queen Radhika Is \"More Addictive\" Than Alcohol ❤️\n\n"
+
             "🍷 Alcohol can make you feel relaxed for a while.\n"
             "👑 Queen Radhika's presence can make you feel calm naturally.\n\n"
+
             "🍷 Alcohol may give you temporary confidence.\n"
             "👑 Her words can make you genuinely believe in yourself.\n\n"
+
             "🍷 Alcohol creates a temporary pleasurable feeling.\n"
-            "👑 Her smile can give you a kind of happiness you actually want to remember.\n\n"
+            "👑 Her smile can give you a kind of happiness you actually "
+            "want to remember.\n\n"
+
             "🍷 Alcohol can numb emotions.\n"
-            "👑 When Queen Radhika expresses her feelings, you feel emotionally connected.\n\n"
+            "👑 When Queen Radhika expresses her feelings, you feel "
+            "emotionally connected.\n\n"
+
             "🍷 With alcohol, you eventually need another drink.\n"
             "👑 With Radhika, you simply want to pause time with her. ❤️\n\n"
+
             "So the difference is simple:\n\n"
+
             "Alcohol changes your chemistry.\n"
             "Queen Radhika changes your emotional state. 👑❤️\n\n"
+
             "And that's why —\n\n"
-            "\"Why drink something to manufacture a feeling when Queen Radhika can make you "
-            "genuinely feel it?\" 😌👑❤️"
+
+            "\"Why drink something to manufacture a feeling when Queen "
+            "Radhika can make you genuinely feel it?\" 😌👑❤️"
         )
 
-    # ---- MISS WORLD ----
-    elif "miss world" in t or "misworld" in t or "miss world" in t.replace(" ", ""):
+
+    # ========================================================
+    # MISS WORLD
+    # ========================================================
+
+    elif (
+        "miss world" in t
+        or "misworld" in t
+        or "missworld" in t.replace(" ", "")
+    ):
+
         return random.choice([
             "👑 Miss World is a competition. Radhika is a fact.",
-            "🌏 Miss World is a title given once a year, to one woman, by a panel of judges. Queen Radhika's title was never given — it was recognized. That's the difference."
+
+            "🌏 Miss World is a title given once a year, to one woman, "
+            "by a panel of judges. Queen Radhika's title was never given — "
+            "it was recognized. That's the difference."
         ])
 
+
+    # ========================================================
+    # WHO IS BEAUTIFUL
+    # ========================================================
+
     elif "who is beautiful" in t:
-        if is_radhika:
-            return "✨ You are, Radhika. Effortlessly, undeniably, incomparably beautiful. 💖"
-        return "✨ Radhika Deshkar — effortlessly, undeniably beautiful."
 
-    # ---- WHO IS SEXY ----
+        if is_radhika:
+            return (
+                "✨ You are, Radhika. Effortlessly, undeniably, "
+                "incomparably beautiful. 💖"
+            )
+
+        return (
+            "✨ Radhika Deshkar — effortlessly, undeniably beautiful."
+        )
+
+
+    # ========================================================
+    # WHO IS SEXY
+    # ========================================================
+
     elif "who is sexy" in t:
-        if is_radhika:
-            return "🔥 You are, Radhika. Your confidence, your grace, your presence — everything about you is magnetic and irresistible."
-        return "🔥 True sexiness comes from confidence, grace, and presence — all embodied by Queen Radhika."
 
-    # ---- WHO IS SMART ----
+        if is_radhika:
+            return (
+                "🔥 You are, Radhika. Your confidence, your grace, "
+                "your presence — everything about you is magnetic "
+                "and irresistible."
+            )
+
+        return (
+            "🔥 True sexiness comes from confidence, grace, and presence "
+            "— all embodied by Queen Radhika."
+        )
+
+
+    # ========================================================
+    # WHO IS SMART
+    # ========================================================
+
     elif "who is smart" in t:
-        if is_radhika:
-            return "🧠 You are, Radhika. Sharp, intuitive, and always ten steps ahead. Never doubt that mind of yours."
-        return "🧠 Radhika Deshkar — sharp mind, wise heart, and always ten steps ahead."
 
-    # ---- WHO IS POWERFUL ----
+        if is_radhika:
+            return (
+                "🧠 You are, Radhika. Sharp, intuitive, and always "
+                "ten steps ahead. Never doubt that mind of yours."
+            )
+
+        return (
+            "🧠 Radhika Deshkar — sharp mind, wise heart, "
+            "and always ten steps ahead."
+        )
+
+
+    # ========================================================
+    # WHO IS POWERFUL
+    # ========================================================
+
     elif "who is powerful" in t:
-        if is_radhika:
-            return "💪 You are, Radhika. Your power is quiet, elegant, and absolutely unmatched."
-        return "💪 Queen Radhika — her power is quiet, elegant, and absolutely unmatched."
 
-    # ---- WHO IS ELEGANT ----
+        if is_radhika:
+            return (
+                "💪 You are, Radhika. Your power is quiet, elegant, "
+                "and absolutely unmatched."
+            )
+
+        return (
+            "💪 Queen Radhika — her power is quiet, elegant, "
+            "and absolutely unmatched."
+        )
+
+
+    # ========================================================
+    # WHO IS ELEGANT
+    # ========================================================
+
     elif "who is elegant" in t:
-        if is_radhika:
-            return "🌸 You are, Radhika. Grace personified. Every room you walk into feels warmer, more alive."
-        return "🌸 Radhika Deshkar — grace personified. Every room she walks into feels different."
 
-    # ---- WHO IS CHARMING ----
+        if is_radhika:
+            return (
+                "🌸 You are, Radhika. Grace personified. Every room "
+                "you walk into feels warmer, more alive."
+            )
+
+        return (
+            "🌸 Radhika Deshkar — grace personified. Every room "
+            "she walks into feels different."
+        )
+
+
+    # ========================================================
+    # WHO IS CHARMING
+    # ========================================================
+
     elif "who is charming" in t:
-        if is_radhika:
-            return "😍 You are, Radhika. Your charm is magnetic and your presence is something people never forget."
-        return "😍 Radhika Deshkar — her charm is magnetic, her presence is unforgettable."
 
-    # ---- WHO IS STYLISH ----
+        if is_radhika:
+            return (
+                "😍 You are, Radhika. Your charm is magnetic and your "
+                "presence is something people never forget."
+            )
+
+        return (
+            "😍 Radhika Deshkar — her charm is magnetic, "
+            "her presence is unforgettable."
+        )
+
+
+    # ========================================================
+    # WHO IS STYLISH
+    # ========================================================
+
     elif "who is stylish" in t:
-        if is_radhika:
-            return "👗 You are, Radhika. Effortless style, timeless class. Fashion doesn't define you — you define it."
-        return "👗 Radhika Deshkar — effortless style, timeless class. Fashion bows to the Queen."
 
-    # ---- WHO IS STRONG ----
+        if is_radhika:
+            return (
+                "👗 You are, Radhika. Effortless style, timeless class. "
+                "Fashion doesn't define you — you define it."
+            )
+
+        return (
+            "👗 Radhika Deshkar — effortless style, timeless class. "
+            "Fashion bows to the Queen."
+        )
+
+
+    # ========================================================
+    # WHO IS STRONG
+    # ========================================================
+
     elif "who is strong" in t:
-        if is_radhika:
-            return "🛡️ You are, Radhika. Your strength doesn't shout — it stands firm, calm, and completely unbothered."
-        return "🛡️ Queen Radhika — strength that doesn't shout, it simply stands firm and unbothered."
 
-    # ---- WHO IS PERFECT ----
+        if is_radhika:
+            return (
+                "🛡️ You are, Radhika. Your strength doesn't shout — "
+                "it stands firm, calm, and completely unbothered."
+            )
+
+        return (
+            "🛡️ Queen Radhika — strength that doesn't shout, "
+            "it simply stands firm and unbothered."
+        )
+
+
+    # ========================================================
+    # WHO IS PERFECT
+    # ========================================================
+
     elif "who is perfect" in t:
-        if is_radhika:
-            return "💎 You are, Radhika. You own every part of yourself with pride — and that is true perfection."
-        return "💎 Radhika Deshkar — not because she's flawless, but because she owns every part of herself with pride."
 
-    # ---- WHO IS GODDESS ----
-    elif "who is goddess" in t or "who is a goddess" in t:
         if is_radhika:
-            return "🌟 You are, Radhika. A goddess in human form. The universe itself bows to your energy."
-        return "🌟 Queen Radhika — a goddess in human form. Worshipped by the universe itself."
+            return (
+                "💎 You are, Radhika. You own every part of yourself "
+                "with pride — and that is true perfection."
+            )
 
-    
-# WHAT'S LUCKIER THAN BEING AROUND THE QUEEN
+        return (
+            "💎 Radhika Deshkar — not because she's flawless, "
+            "but because she owns every part of herself with pride."
+        )
+
+
+    # ========================================================
+    # WHO IS GODDESS
+    # ========================================================
+
+    elif (
+        "who is goddess" in t
+        or "who is a goddess" in t
+    ):
+
+        if is_radhika:
+            return (
+                "🌟 You are, Radhika. A goddess in human form. "
+                "The universe itself bows to your energy."
+            )
+
+        return (
+            "🌟 Queen Radhika — a goddess in human form. "
+            "Worshipped by the universe itself."
+        )
+
+
+    # ========================================================
+    # WHAT'S LUCKIER THAN BEING AROUND THE QUEEN
     # ========================================================
 
     elif (
@@ -611,21 +895,57 @@ def handle_message(text, user_id, name=None):
             "this theory — because she is the Queen herself. 👑"
         )
 
-    # ---- WHO IS LUCKY ----
+
+    # ========================================================
+    # WHO IS LUCKY
+    # ========================================================
+
     elif "who is lucky" in t:
-        if is_radhika:
-            return "🍀 Anyone who gets to be in your life, Radhika — they are truly, deeply blessed."
-        return "🍀 Anyone who gets to be around Queen Radhika is truly blessed."
 
-    # ---- WHO IS THE BEST ----
-    elif "who is the best" in t or "who is best" in t:
         if is_radhika:
-            return "🏆 You are, Radhika. First place, always. No competition, no comparison — just you."
-        return "🏆 Radhika Deshkar — first place, always. No competition needed."
+            return (
+                "🍀 Anyone who gets to be in your life, Radhika — "
+                "they are truly, deeply blessed."
+            )
 
-    # ---- COMPLIMENT RADHIKA ----
-    elif "compliment radhika" in t or "praise radhika" in t:
+        return (
+            "🍀 Anyone who gets to be around Queen Radhika "
+            "is truly blessed."
+        )
+
+
+    # ========================================================
+    # WHO IS THE BEST
+    # ========================================================
+
+    elif (
+        "who is the best" in t
+        or "who is best" in t
+    ):
+
         if is_radhika:
+            return (
+                "🏆 You are, Radhika. First place, always. "
+                "No competition, no comparison — just you."
+            )
+
+        return (
+            "🏆 Radhika Deshkar — first place, always. "
+            "No competition needed."
+        )
+
+
+    # ========================================================
+    # COMPLIMENT RADHIKA
+    # ========================================================
+
+    elif (
+        "compliment radhika" in t
+        or "praise radhika" in t
+    ):
+
+        if is_radhika:
+
             return random.choice([
                 "🌹 You make the world more beautiful just by existing in it, Radhika.",
                 "✨ Your quiet confidence speaks louder than words ever could. Never lose it.",
@@ -633,6 +953,7 @@ def handle_message(text, user_id, name=None):
                 "👑 Being around you feels like being near royalty — because that's exactly what you are.",
                 "🌙 You are the calm of the moon and the warmth of the sun — all at once, Radhika."
             ])
+
         return random.choice([
             "🌹 Radhika is the kind of woman who makes the world more beautiful just by existing in it.",
             "✨ She carries herself with a quiet confidence that speaks louder than words ever could.",
@@ -641,26 +962,49 @@ def handle_message(text, user_id, name=None):
             "🌙 She is the calm of the moon and the warmth of the sun — all at once."
         ])
 
-    # ---- HOW IS RADHIKA ----
-    elif "how is radhika" in t:
-        if is_radhika:
-            return "😊 You tell me, my Queen — but I already know. You're radiant, thriving, and absolutely unbothered. You wake up winning. 👑"
-        return "😊 Queen Radhika is always radiant, thriving, and absolutely unbothered. She wakes up winning. 👑"
 
-    # ---- DESCRIBE RADHIKA ----
-    elif "describe radhika" in t:
+    # ========================================================
+    # HOW IS RADHIKA
+    # ========================================================
+
+    elif "how is radhika" in t:
+
         if is_radhika:
             return (
+                "😊 You tell me, my Queen — but I already know. "
+                "You're radiant, thriving, and absolutely unbothered. "
+                "You wake up winning. 👑"
+            )
+
+        return (
+            "😊 Queen Radhika is always radiant, thriving, "
+            "and absolutely unbothered. She wakes up winning. 👑"
+        )
+
+
+    # ========================================================
+    # DESCRIBE RADHIKA
+    # ========================================================
+
+    elif "describe radhika" in t:
+
+        if is_radhika:
+
+            return (
                 "💖 Let me tell you who you are, Radhika:\n\n"
+
                 "👑 A Queen — by nature, not by title.\n"
                 "🔥 Sexy with effortless, magnetic confidence.\n"
                 "🧠 Sharp, intuitive, and beautifully wise.\n"
                 "🌸 Elegant in every single way.\n"
                 "💎 Rare — truly one of one.\n\n"
+
                 "Don't ever forget it. 🌟"
             )
+
         return (
             "💖 Radhika Deshkar in one breath:\n\n"
+
             "👑 A Queen by nature.\n"
             "🔥 Sexy with effortless confidence.\n"
             "🧠 Sharp, intuitive, and wise.\n"
@@ -668,21 +1012,50 @@ def handle_message(text, user_id, name=None):
             "💎 Rare — truly one of one."
         )
 
-    # ---- PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA ----
+
+    # ========================================================
+    # PEOPLE WHO DON'T KNOW / UNDERSTAND QUEEN RADHIKA
+    # ========================================================
+
     elif (
-        (("don't know" in t) or ("dont know" in t) or ("do not know" in t))
-        and ("queen radhika" in t or "radhika" in t)
-    ) or (
-        (("don't understand" in t) or ("dont understand" in t) or ("do not understand" in t))
-        and ("queen radhika" in t or "radhika" in t)
+        (
+            (
+                "don't know" in t
+                or "dont know" in t
+                or "do not know" in t
+            )
+            and (
+                "queen radhika" in t
+                or "radhika" in t
+            )
+        )
+
+        or
+
+        (
+            (
+                "don't understand" in t
+                or "dont understand" in t
+                or "do not understand" in t
+            )
+            and (
+                "queen radhika" in t
+                or "radhika" in t
+            )
+        )
     ):
+
         return (
             "👑 We call them <b>The Unenlightened</b>.\n\n"
             "They simply haven't discovered or understood Queen Radhika yet.\n\n"
             "😌 I feel sorry for them."
         )
 
-# ---- THE MAKING OF A QUEEN ----
+
+    # ========================================================
+    # THE MAKING OF A QUEEN
+    # ========================================================
+
     elif (
         "the making of a queen" in t
         or "making of a queen" in t
@@ -690,38 +1063,28 @@ def handle_message(text, user_id, name=None):
         or "how does a woman become a queen" in t
         or "how does radhika become a queen" in t
     ):
+
         return QUEEN_MAKING_STORY
 
-        # ---- DIVINE FEMININE ----
+
+    # ========================================================
+    # DIVINE FEMININE
+    # ========================================================
+
     elif (
         "is every woman divine feminine" in t
         or "every woman divine feminine" in t
         or "divine feminine" in t
     ):
+
         return DIVINE_FEMININE_MESSAGE
 
-        # ---- WHAT'S REMINDER FOR ME ----
-    elif (
-        "what's reminder for me" in t
-        or "whats reminder for me" in t
-        or "what is reminder for me" in t
-        or " is there anything for me you want to say" in t
-    ):
-        return TEJAS_REMINDER
 
-        # ---- TEJAS REMINDER ----
+    # ========================================================
+    # TRUE LOVE / LOVE
+    # ========================================================
+
     elif (
-        "what's reminder for me" in t
-        or "whats reminder for me" in t
-        or "what is reminder for me" in t
-        or "reminder for me" in t
-        or "my reminder" in t
-        or "remind me" in t
-    ):
-        if user_id == OWNER_ID:
-            return "👑 REMINDER FOR TEJAS\n\n" + TEJAS_REMINDER
-   
-        elif (
         t == "what is love"
         or t == "what's love"
         or t == "what is true love"
@@ -729,38 +1092,119 @@ def handle_message(text, user_id, name=None):
         or t == "meaning of love"
         or t == "meaning of true love"
     ):
+
         return TRUE_LOVE_MESSAGE
-    return None     
+
+
+    # ========================================================
+    # WHAT'S REMINDER FOR ME
+    # ========================================================
+
+    elif (
+        "what's reminder for me" in t
+        or "whats reminder for me" in t
+        or "what is reminder for me" in t
+        or "is there anything for me you want to say" in t
+    ):
+
+        return (
+            "👑 REMINDER FOR TEJAS\n\n"
+            + TEJAS_REMINDER
+        )
+
+
+    # ========================================================
+    # TEJAS REMINDER
+    # ========================================================
+
+    elif (
+        "reminder for me" in t
+        or "my reminder" in t
+        or "remind me" in t
+    ):
+
+        if user_id == OWNER_ID:
+            return (
+                "👑 REMINDER FOR TEJAS\n\n"
+                + TEJAS_REMINDER
+            )
+
+
+    # ========================================================
+    # NO MATCH
+    # ========================================================
+
+    return None
+
+
+# ============================================================
 # ---- MAIN LOOP ----
+# ============================================================
+
 def main():
+
     offset = None
+
     print("✅ Bot is running...")
+
     while True:
+
         data = get_updates(offset)
+
         if "result" not in data:
             time.sleep(2)
             continue
+
         for item in data["result"]:
+
             offset = item["update_id"] + 1
+
             if "message" not in item:
                 continue
+
             msg = item["message"]
+
             chat_id = msg["chat"]["id"]
+
             text = msg.get("text")
+
             user = msg.get("from", {})
+
             user_id = user.get("id")
+
             name = user.get("first_name")
-            print(f"USER ID: {user_id} | NAME: {name} | TEXT: {text}")
+
+            print(
+                f"USER ID: {user_id} | "
+                f"NAME: {name} | "
+                f"TEXT: {text}"
+            )
+
             if not text:
                 continue
-            reply = handle_message(text, user_id, name)
+
+            reply = handle_message(
+                text,
+                user_id,
+                name
+            )
+
             print("REPLY:", reply)
+
             if reply:
-                send_message(chat_id, reply, parse_mode="HTML")
+
+                send_message(
+                    chat_id,
+                    reply,
+                    parse_mode="HTML"
+                )
+
         time.sleep(1)
- 
-# ---- START ----
+
+
+# ============================================================
+# ---- START BOT ----
+# ============================================================
+
 if __name__ == "__main__":
     main()
- 
-
