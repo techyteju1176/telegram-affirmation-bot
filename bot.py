@@ -74,6 +74,16 @@ QUEEN_PATH_MESSAGE = (
 )
 
 
+# ---- QUEEN IS RETURNING / KEEP WAITING ----
+QUEEN_RETURN_MESSAGE = (
+    "👑 Oh okay, I’m sorry for disturbing, Queen. "
+    "I hope everyone around you feels blessed by your presence—"
+    "though some might be jealous of your beauty and sexiness, which is perfectly fine; "
+    "that’s just a sign of success. 😏😂\n\n"
+    "And if you’re busy, I hope they understand that the Queen’s aura "
+    "is making everything around her successful. ✨👑"
+)
+
 # ============================================================
 # ---- QUEEN STORY ----
 # ============================================================
@@ -481,6 +491,14 @@ def handle_message(text, user_id, name=None):
         )
 
 
+        # ---- QUEEN IS RETURNING / KEEP WAITING ----
+    elif (
+        "keep waiting, bot" in t
+        or "queen is qunning" in t
+        or "queen decides when she returns" in t
+    ):
+        return QUEEN_RETURN_MESSAGE
+        
     # ========================================================
     # WHO IS QUEEN
     # ========================================================
