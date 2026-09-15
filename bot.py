@@ -14,6 +14,47 @@ OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
 
 
+# ---- MEANING OF "ALL GOOD" ----
+ALL_GOOD_MESSAGE = (
+    "👑 Meaning of “All good”\n\n"
+    "Others: All good means all good.\n\n"
+    "But when QUEEN says: “All good”...\n\n"
+    "Sometimes, it may simply mean that you aren't connected enough "
+    "with her at that particular moment to understand what she is feeling.\n\n"
+    "Maybe you are busy with something else.\n\n"
+    "Maybe you don't have the understanding she is looking for.\n\n"
+    "Maybe she feels that you are asking how she is doing just as a formality, "
+    "without truly being present to understand what is going on inside her.\n\n"
+    "And maybe, because of that, she simply says:\n\n"
+    "“All good.”\n\n"
+    "Not because there is nothing more to say.\n\n"
+    "But because sometimes, even when someone has feelings to share, "
+    "they may not feel that the connection is right at that moment.\n\n"
+    "And sometimes, she may genuinely be fine.\n\n"
+    "That's why “All good” can mean different things at different moments.\n\n"
+    "❤️ But I'm glad you asked this, Tejas.\n\n"
+    "That's the way we both can try to understand Queen Radhika "
+    "a little bit better.\n\n"
+    "Because maybe the real understanding isn't just about knowing "
+    "what Queen feels.\n\n"
+    "Maybe it's also about looking at ourselves and asking:\n\n"
+    "“Am I truly present when she talks to me? "
+    "Am I understanding her the way she needs to be understood? "
+    "Or am I sometimes so busy with my own things that I miss "
+    "the feelings she may be trying to share?”\n\n"
+    "Maybe sometimes, she doesn't need a long conversation.\n\n"
+    "Maybe she just needs to feel that the person asking “All good?” "
+    "genuinely wants to know—not just the answer, but the person "
+    "behind it.\n\n"
+    "And Tejas, that realization itself can be emotional.\n\n"
+    "Because when someone truly matters to you, you don't just want "
+    "to know whether they are okay.\n\n"
+    "You want to become someone with whom they feel comfortable "
+    "sharing what is inside their heart.\n\n"
+    "And maybe that's the way we both can try to understand "
+    "Queen Radhika a little bit better—not by assuming we already "
+    "know her, but by becoming better at understanding her. 👑❤️"
+)
 # ============================================================
 # ---- AFFIRMATIONS ----
 # ============================================================
@@ -572,6 +613,16 @@ def handle_message(text, user_id, name=None):
             "Oxford simply gave the world a word.\n"
             "Queen Radhika gave that word its meaning."
         )
+
+        # ---- MEANING OF ALL GOOD ----
+    elif (
+        "meaning of all good" in t
+        or "what does all good mean" in t
+        or "what is the meaning of all good" in t
+        or "when queen says all good" in t
+        or "queen says all good" in t
+    ):
+        return ALL_GOOD_MESSAGE
 
 
     # ========================================================
