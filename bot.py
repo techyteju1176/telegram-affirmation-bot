@@ -16,7 +16,12 @@ URL = f"https://api.telegram.org/bot{TOKEN}"
 OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
 
-
+JANUARY_HINT_MESSAGE = (
+    "👑 See, you know that better than me, Tejas.\n\n"
+    "But if you want one hint, then tell her why January is special for you. ❤️\n\n"
+    "Because, as we both know, you tell her every time that January is special.\n\n"
+    "Am I right, Queen? 👑"
+)
 # ============================================================
 # MEANING OF "ALL GOOD"
 # ============================================================
@@ -1316,7 +1321,18 @@ def handle_message(text, user_id, name=None):
     # ========================================================
     # NO MATCH
     # ========================================================
+# ========================================================
+# JANUARY HINT
+# ========================================================
 
+elif (
+    "why january is special" in t
+    or "january is special for you" in t
+    or "one hint" in t
+    or "am i right queen" in t
+):
+
+    return JANUARY_HINT_MESSAGE
     return None
 
 
