@@ -16,12 +16,19 @@ URL = f"https://api.telegram.org/bot{TOKEN}"
 OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
 
+
+# ============================================================
+# JANUARY HINT
+# ============================================================
+
 JANUARY_HINT_MESSAGE = (
     "👑 See, you know that better than me, Tejas.\n\n"
     "But if you want one hint, then tell her why January is special for you. ❤️\n\n"
     "Because, as we both know, you tell her every time that January is special.\n\n"
     "Am I right, Queen? 👑"
 )
+
+
 # ============================================================
 # MEANING OF "ALL GOOD"
 # ============================================================
@@ -73,7 +80,14 @@ ALL_GOOD_MESSAGE = (
 # ============================================================
 
 QUEEN_AFFIRMATIONS = [
-    "I am the queen of my own life—confident, respected, emotionally secure, and deeply fulfilled. I attract luxury, abundance, comfort, and peace with ease. I am financially independent, disciplined with savings, and capable of building a secure future. I honor my body, my privacy, my sensuality, and my personal pleasure with confidence and self-love. My husband and I share deep emotional intimacy, passion, romance, and joyful connection. I am deeply valued in his life, and our relationship is built on trust, affection, and mutual devotion. My in-laws respect my standards, appreciate my presence, and value my opinions. My parents are peaceful, proud, and happy seeing me thrive."
+    "I am the queen of my own life—confident, respected, emotionally secure, and deeply fulfilled. "
+    "I attract luxury, abundance, comfort, and peace with ease. I am financially independent, "
+    "disciplined with savings, and capable of building a secure future. I honor my body, my privacy, "
+    "my sensuality, and my personal pleasure with confidence and self-love. My husband and I share "
+    "deep emotional intimacy, passion, romance, and joyful connection. I am deeply valued in his life, "
+    "and our relationship is built on trust, affection, and mutual devotion. My in-laws respect my "
+    "standards, appreciate my presence, and value my opinions. My parents are peaceful, proud, and "
+    "happy seeing me thrive."
 ]
 
 
@@ -548,7 +562,7 @@ def handle_message(text, user_id, name=None):
     # I AM QUEEN
     # ========================================================
 
-    if "i am queen" in t:
+    elif "i am queen" in t:
 
         if is_radhika:
 
@@ -1259,10 +1273,6 @@ def handle_message(text, user_id, name=None):
     # ========================================================
     # REMINDER 2
     # ========================================================
-    # IMPORTANT:
-    # This MUST come before the normal Reminder 1 block.
-    # Otherwise "reminder for me as of now" can match Reminder 1.
-    # ========================================================
 
     elif (
         "reminder 2" in t
@@ -1319,20 +1329,23 @@ def handle_message(text, user_id, name=None):
 
 
     # ========================================================
+    # JANUARY HINT
+    # ========================================================
+
+    elif (
+        "why january is special" in t
+        or "january is special for you" in t
+        or "one hint" in t
+        or "am i right queen" in t
+    ):
+
+        return JANUARY_HINT_MESSAGE
+
+
+    # ========================================================
     # NO MATCH
     # ========================================================
-# ========================================================
-# JANUARY HINT
-# ========================================================
 
-elif (
-    "why january is special" in t
-    or "january is special for you" in t
-    or "one hint" in t
-    or "am i right queen" in t
-):
-
-    return JANUARY_HINT_MESSAGE
     return None
 
 
