@@ -114,6 +114,17 @@ QUEEN_PATH_MESSAGE = (
     "Agree, QUEEN? 👑"
 )
 
+# ---- TEJAS REMINDER 2 ----
+TEJAS_REMINDER_2 = (
+    "Tejas, it’s the end of September 2026. "
+    "You’ve been carrying something special that you decided to tell Queen Radhika "
+    "for around 3 years.\n\n"
+    "Don’t let another year pass without saying it.\n\n"
+    "Set yourself a clear deadline before 31 December 2026 and actually tell her. "
+    "Queen deserves to know what you’ve been meaning to say.\n\n"
+    "Don’t keep postponing it so long that it starts looking like there was never "
+    "anything to say."
+)
 
 # ---- QUEEN IS RETURNING / KEEP WAITING ----
 QUEEN_RETURN_MESSAGE = (
@@ -1217,7 +1228,19 @@ def handle_message(text, user_id, name=None):
     # ========================================================
     # NO MATCH
     # ========================================================
-
+# ---- REMINDER 2 ----
+elif (
+    "reminder 2" in t
+    or "reminder two" in t
+    or "reminder for me as of now" in t
+    or "hey what's reminder 2" in t
+    or "hey whats reminder 2" in t
+    or "what's reminder 2" in t
+    or "whats reminder 2" in t
+    or "what is reminder 2" in t
+):
+    return "👑 REMINDER 2 FOR TEJAS\n\n" + TEJAS_REMINDER_2
+    
     return None
 
 
