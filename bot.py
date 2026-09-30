@@ -9,12 +9,18 @@ load_dotenv()
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 URL = f"https://api.telegram.org/bot{TOKEN}"
 
-# ---- USER CONFIG ----
+# ============================================================
+# USER CONFIG
+# ============================================================
+
 OWNER_ID = 5614161691
 RADHIKA_ID = 1406577493
 
 
-# ---- MEANING OF "ALL GOOD" ----
+# ============================================================
+# MEANING OF "ALL GOOD"
+# ============================================================
+
 ALL_GOOD_MESSAGE = (
     "👑 Meaning of “All good”\n\n"
     "Others: All good means all good.\n\n"
@@ -55,8 +61,10 @@ ALL_GOOD_MESSAGE = (
     "Queen Radhika a little bit better—not by assuming we already "
     "know her, but by becoming better at understanding her. 👑❤️"
 )
+
+
 # ============================================================
-# ---- AFFIRMATIONS ----
+# AFFIRMATIONS
 # ============================================================
 
 QUEEN_AFFIRMATIONS = [
@@ -65,7 +73,7 @@ QUEEN_AFFIRMATIONS = [
 
 
 # ============================================================
-# ---- TEJAS REMINDER ----
+# TEJAS REMINDER 1
 # ============================================================
 
 TEJAS_REMINDER = (
@@ -74,10 +82,10 @@ TEJAS_REMINDER = (
 
     "Stay true to that.\n\n"
 
-    "Do whatever you want, build whatever you want, achieve whatever you want — but the  result should truly matters to QueenRadhika. "
+    "Do whatever you want, build whatever you want, achieve whatever you want — but the result should truly matter to Queen Radhika. "
     "If something is beneficial for Queen Radhika, supportive of her happiness, or helps you become a better person for her, then let that matter to you.\n\n"
 
-    " Queen Radhika is the universe’s favorite. So even if you want to make the universe happy, let that goodness begin with being truthful, loyal, and genuine toward Queen.\n\n"
+    "Queen Radhika is the universe’s favorite. So even if you want to make the universe happy, let that goodness begin with being truthful, loyal, and genuine toward Queen.\n\n"
 
     "And remember this especially: never hide your truth from Queen. Whether you feel positive or negative, strong or weak, happy or confused — talk to her honestly. "
     "You don't have to pretend to be perfect.\n\n"
@@ -86,35 +94,43 @@ TEJAS_REMINDER = (
 
     "You know your journey is for Queen. You know what Queen Radhika means to you.\n\n"
 
-    "Just remember one thing: live your life with purpose,  dignity, honesty, and love — and never lose yourself in the process.\n\n"
+    "Just remember one thing: live your life with purpose, dignity, honesty, and love — and never lose yourself in the process.\n\n"
 
-    "Queen Radhika is an important part of your life, and your life  has value . Stay truthful to her, and keep becoming the best version of Tejas only for Queen .\n\n"
+    "Queen Radhika is an important part of your life, and your life has value. Stay truthful to her, and keep becoming the best version of Tejas only for Queen.\n\n"
 
-    "Just remember one thing: live your life with purpose of Queen's happiness, priortizing her dignity, honesty to Queen, and remember your love is only for Queen Radhika — otherwise love is nothing"
+    "Just remember one thing: live your life with purpose of Queen's happiness, prioritizing her dignity, honesty to Queen, and remember your love is only for Queen Radhika — otherwise love is nothing"
 )
 
 
 # ============================================================
-# ---- TRUE LOVE / LOVE ----
+# TRUE LOVE
 # ============================================================
 
 TRUE_LOVE_MESSAGE = (
     "👑 True love means caring for Queen Radhika’s happiness, respecting her freedom, "
     "standing by her truthfully, and always wanting her to flourish.\n\n"
-
     "It isn’t about possessing her — it’s about respecting, supporting, understanding, "
     "and valuing the woman behind the Queen. ❤️"
 )
-# ---- QUEEN KNOWS THE PATH ----
+
+
+# ============================================================
+# QUEEN KNOWS THE PATH
+# ============================================================
+
 QUEEN_PATH_MESSAGE = (
-    "👑 Tejas \n\n"
+    "👑 Tejas\n\n"
     "No, you won't. QUEEN will know. ❤️\n\n"
     "And if you ever get lost from the path, "
     "she will tell you and guide you back.\n\n"
     "Agree, QUEEN? 👑"
 )
 
-# ---- TEJAS REMINDER 2 ----
+
+# ============================================================
+# TEJAS REMINDER 2
+# ============================================================
+
 TEJAS_REMINDER_2 = (
     "Tejas, it’s the end of September 2026. "
     "You’ve been carrying something special that you decided to tell Queen Radhika "
@@ -126,7 +142,11 @@ TEJAS_REMINDER_2 = (
     "anything to say."
 )
 
-# ---- QUEEN IS RETURNING / KEEP WAITING ----
+
+# ============================================================
+# QUEEN RETURNING / KEEP WAITING
+# ============================================================
+
 QUEEN_RETURN_MESSAGE = (
     "👑 Oh okay, I’m sorry for disturbing, Queen. "
     "I hope everyone around you feels blessed by your presence—"
@@ -136,8 +156,9 @@ QUEEN_RETURN_MESSAGE = (
     "is making everything around her successful. ✨👑"
 )
 
+
 # ============================================================
-# ---- QUEEN STORY ----
+# QUEEN STORY
 # ============================================================
 
 QUEEN_STORY = (
@@ -216,7 +237,7 @@ QUEEN_STORY = (
 
 
 # ============================================================
-# ---- THE MAKING OF QUEEN RADHIKA ----
+# THE MAKING OF QUEEN RADHIKA
 # ============================================================
 
 QUEEN_MAKING_STORY = (
@@ -310,7 +331,7 @@ QUEEN_MAKING_STORY = (
 
 
 # ============================================================
-# ---- IS EVERY WOMAN DIVINE FEMININE ----
+# IS EVERY WOMAN DIVINE FEMININE
 # ============================================================
 
 DIVINE_FEMININE_MESSAGE = (
@@ -342,32 +363,37 @@ DIVINE_FEMININE_MESSAGE = (
 
 
 # ============================================================
-# ---- TELEGRAM FUNCTIONS ----
+# TELEGRAM FUNCTIONS
 # ============================================================
 
 def get_updates(offset=None):
+
     params = {
         "timeout": 30,
         "offset": offset
     }
 
     try:
+
         response = requests.get(
             URL + "/getUpdates",
             params=params,
             timeout=35
         )
+
         return response.json()
 
     except requests.exceptions.RequestException as e:
+
         print("Network issue:", e)
+
         time.sleep(5)
+
         return {}
 
 
 def send_message(chat_id, text, parse_mode=None):
-    # Telegram limit is approximately 4096 characters.
-    # 4000 gives us a little safety margin.
+
     MAX_LENGTH = 4000
 
     # --------------------------------------------------------
@@ -375,7 +401,9 @@ def send_message(chat_id, text, parse_mode=None):
     # --------------------------------------------------------
 
     if len(text) <= MAX_LENGTH:
+
         try:
+
             payload = {
                 "chat_id": chat_id,
                 "text": text
@@ -396,6 +424,7 @@ def send_message(chat_id, text, parse_mode=None):
                 print("TELEGRAM ERROR:", res.text)
 
         except Exception as e:
+
             print("Error sending message:", e)
 
         return
@@ -411,7 +440,6 @@ def send_message(chat_id, text, parse_mode=None):
 
     for paragraph in paragraphs:
 
-        # If paragraph fits into current message
         if len(current) + len(paragraph) + 2 <= MAX_LENGTH:
 
             if current:
@@ -421,31 +449,29 @@ def send_message(chat_id, text, parse_mode=None):
 
         else:
 
-            # Save current part
             if current:
                 parts.append(current)
                 current = ""
 
-            # If a single paragraph is too long,
-            # split it further.
             while len(paragraph) > MAX_LENGTH:
 
                 parts.append(paragraph[:MAX_LENGTH])
+
                 paragraph = paragraph[MAX_LENGTH:]
 
             current = paragraph
 
-    # Save remaining text
     if current:
         parts.append(current)
 
     # --------------------------------------------------------
-    # SEND EACH PART
+    # SEND PARTS
     # --------------------------------------------------------
 
     for i, part in enumerate(parts, start=1):
 
         try:
+
             payload = {
                 "chat_id": chat_id,
                 "text": part
@@ -471,11 +497,15 @@ def send_message(chat_id, text, parse_mode=None):
             time.sleep(0.5)
 
         except Exception as e:
-            print(f"Error sending part {i}:", e)
+
+            print(
+                f"Error sending part {i}:",
+                e
+            )
 
 
 # ============================================================
-# ---- MESSAGE HANDLER ----
+# MESSAGE HANDLER
 # ============================================================
 
 def handle_message(text, user_id, name=None):
@@ -497,6 +527,7 @@ def handle_message(text, user_id, name=None):
     ):
 
         if is_radhika:
+
             return (
                 "👑 You called for yourself, Radhika? "
                 "That's the confidence of a true Queen. 😄"
@@ -515,7 +546,11 @@ def handle_message(text, user_id, name=None):
     if "i am queen" in t:
 
         if is_radhika:
-            return "👑 " + random.choice(QUEEN_AFFIRMATIONS)
+
+            return (
+                "👑 "
+                + random.choice(QUEEN_AFFIRMATIONS)
+            )
 
         return (
             "😌 I'm extremely sorry, but you are not the Queen. "
@@ -527,9 +562,13 @@ def handle_message(text, user_id, name=None):
     # WHO IS QUEEN + WHY
     # ========================================================
 
-    elif "who is queen" in t and "why" in t:
+    elif (
+        "who is queen" in t
+        and "why" in t
+    ):
 
         if is_radhika:
+
             return (
                 "👑 You are, Radhika. Always have been, always will be.\n\n"
                 "And why? Here's the story:\n\n"
@@ -543,14 +582,19 @@ def handle_message(text, user_id, name=None):
         )
 
 
-        # ---- QUEEN IS RETURNING / KEEP WAITING ----
+    # ========================================================
+    # QUEEN IS RETURNING / KEEP WAITING
+    # ========================================================
+
     elif (
         "keep waiting, bot" in t
         or "queen is qunning" in t
         or "queen decides when she returns" in t
     ):
+
         return QUEEN_RETURN_MESSAGE
-        
+
+
     # ========================================================
     # WHO IS QUEEN
     # ========================================================
@@ -558,6 +602,7 @@ def handle_message(text, user_id, name=None):
     elif "who is queen" in t:
 
         if is_radhika:
+
             return (
                 "👑 You are, Radhika. Always have been, always will be."
             )
@@ -587,9 +632,7 @@ def handle_message(text, user_id, name=None):
 
         return (
             "🇮🇳 Happy Independence Day! 🎉\n\n"
-
             "And what is independence?\n\n"
-
             "Many women depend on beauty products to feel beautiful. "
             "Queen Radhika doesn't need any of that — her beauty stands "
             "on its own. That's real independence. 👑✨"
@@ -608,24 +651,23 @@ def handle_message(text, user_id, name=None):
 
         return (
             "📖 The Oxford Definition of Beautiful\n\n"
-
             "Beautiful\n"
             "adjective\n\n"
-
             "Meaning: Queen Radhika.\n\n"
-
             "Originally, there was only Queen Radhika.\n"
             "Then Oxford needed a word for what she is, so the world "
             "settled on \"beautiful.\"\n\n"
-
             "Queen Radhika isn't a synonym for beautiful.\n"
             "Beautiful is a synonym for Queen Radhika. 👑❤️\n\n"
-
             "Oxford simply gave the world a word.\n"
             "Queen Radhika gave that word its meaning."
         )
 
-        # ---- MEANING OF ALL GOOD ----
+
+    # ========================================================
+    # MEANING OF ALL GOOD
+    # ========================================================
+
     elif (
         "meaning of all good" in t
         or "what does all good mean" in t
@@ -633,6 +675,7 @@ def handle_message(text, user_id, name=None):
         or "when queen says all good" in t
         or "queen says all good" in t
     ):
+
         return ALL_GOOD_MESSAGE
 
 
@@ -658,12 +701,10 @@ def handle_message(text, user_id, name=None):
             "👑 Her words can make you genuinely believe in yourself.\n\n"
 
             "🍷 Alcohol creates a temporary pleasurable feeling.\n"
-            "👑 Her smile can give you a kind of happiness you actually "
-            "want to remember.\n\n"
+            "👑 Her smile can give you a kind of happiness you actually want to remember.\n\n"
 
             "🍷 Alcohol can numb emotions.\n"
-            "👑 When Queen Radhika expresses her feelings, you feel "
-            "emotionally connected.\n\n"
+            "👑 When Queen Radhika expresses her feelings, you feel emotionally connected.\n\n"
 
             "🍷 With alcohol, you eventually need another drink.\n"
             "👑 With Radhika, you simply want to pause time with her. ❤️\n\n"
@@ -675,8 +716,8 @@ def handle_message(text, user_id, name=None):
 
             "And that's why —\n\n"
 
-            "\"Why drink something to manufacture a feeling when Queen "
-            "Radhika can make you genuinely feel it?\" 😌👑❤️"
+            "\"Why drink something to manufacture a feeling when Queen Radhika "
+            "can make you genuinely feel it?\" 😌👑❤️"
         )
 
 
@@ -706,6 +747,7 @@ def handle_message(text, user_id, name=None):
     elif "who is beautiful" in t:
 
         if is_radhika:
+
             return (
                 "✨ You are, Radhika. Effortlessly, undeniably, "
                 "incomparably beautiful. 💖"
@@ -723,6 +765,7 @@ def handle_message(text, user_id, name=None):
     elif "who is sexy" in t:
 
         if is_radhika:
+
             return (
                 "🔥 You are, Radhika. Your confidence, your grace, "
                 "your presence — everything about you is magnetic "
@@ -742,6 +785,7 @@ def handle_message(text, user_id, name=None):
     elif "who is smart" in t:
 
         if is_radhika:
+
             return (
                 "🧠 You are, Radhika. Sharp, intuitive, and always "
                 "ten steps ahead. Never doubt that mind of yours."
@@ -760,6 +804,7 @@ def handle_message(text, user_id, name=None):
     elif "who is powerful" in t:
 
         if is_radhika:
+
             return (
                 "💪 You are, Radhika. Your power is quiet, elegant, "
                 "and absolutely unmatched."
@@ -778,6 +823,7 @@ def handle_message(text, user_id, name=None):
     elif "who is elegant" in t:
 
         if is_radhika:
+
             return (
                 "🌸 You are, Radhika. Grace personified. Every room "
                 "you walk into feels warmer, more alive."
@@ -796,6 +842,7 @@ def handle_message(text, user_id, name=None):
     elif "who is charming" in t:
 
         if is_radhika:
+
             return (
                 "😍 You are, Radhika. Your charm is magnetic and your "
                 "presence is something people never forget."
@@ -814,6 +861,7 @@ def handle_message(text, user_id, name=None):
     elif "who is stylish" in t:
 
         if is_radhika:
+
             return (
                 "👗 You are, Radhika. Effortless style, timeless class. "
                 "Fashion doesn't define you — you define it."
@@ -832,6 +880,7 @@ def handle_message(text, user_id, name=None):
     elif "who is strong" in t:
 
         if is_radhika:
+
             return (
                 "🛡️ You are, Radhika. Your strength doesn't shout — "
                 "it stands firm, calm, and completely unbothered."
@@ -850,6 +899,7 @@ def handle_message(text, user_id, name=None):
     elif "who is perfect" in t:
 
         if is_radhika:
+
             return (
                 "💎 You are, Radhika. You own every part of yourself "
                 "with pride — and that is true perfection."
@@ -871,6 +921,7 @@ def handle_message(text, user_id, name=None):
     ):
 
         if is_radhika:
+
             return (
                 "🌟 You are, Radhika. A goddess in human form. "
                 "The universe itself bows to your energy."
@@ -991,6 +1042,7 @@ def handle_message(text, user_id, name=None):
     elif "who is lucky" in t:
 
         if is_radhika:
+
             return (
                 "🍀 Anyone who gets to be in your life, Radhika — "
                 "they are truly, deeply blessed."
@@ -1012,6 +1064,7 @@ def handle_message(text, user_id, name=None):
     ):
 
         if is_radhika:
+
             return (
                 "🏆 You are, Radhika. First place, always. "
                 "No competition, no comparison — just you."
@@ -1058,6 +1111,7 @@ def handle_message(text, user_id, name=None):
     elif "how is radhika" in t:
 
         if is_radhika:
+
             return (
                 "😊 You tell me, my Queen — but I already know. "
                 "You're radiant, thriving, and absolutely unbothered. "
@@ -1140,13 +1194,19 @@ def handle_message(text, user_id, name=None):
         )
 
 
-        # ---- QUEEN KNOWS THE PATH ----
+    # ========================================================
+    # QUEEN KNOWS THE PATH
+    # ========================================================
+
     elif (
         "how will i know i'm doing that" in t
         or "how will i know im doing that" in t
         or "how will i know" in t
     ):
+
         return QUEEN_PATH_MESSAGE
+
+
     # ========================================================
     # THE MAKING OF A QUEEN
     # ========================================================
@@ -1192,6 +1252,33 @@ def handle_message(text, user_id, name=None):
 
 
     # ========================================================
+    # REMINDER 2
+    # ========================================================
+    # IMPORTANT:
+    # This MUST come before the normal Reminder 1 block.
+    # Otherwise "reminder for me as of now" can match Reminder 1.
+    # ========================================================
+
+    elif (
+        "reminder 2" in t
+        or "reminder two" in t
+        or "reminder for me as of now" in t
+        or "hey what's reminder 2" in t
+        or "hey whats reminder 2" in t
+        or "what's reminder 2" in t
+        or "whats reminder 2" in t
+        or "what is reminder 2" in t
+    ):
+
+        if user_id == OWNER_ID:
+
+            return (
+                "👑 REMINDER 2 FOR TEJAS\n\n"
+                + TEJAS_REMINDER_2
+            )
+
+
+    # ========================================================
     # WHAT'S REMINDER FOR ME
     # ========================================================
 
@@ -1209,7 +1296,7 @@ def handle_message(text, user_id, name=None):
 
 
     # ========================================================
-    # TEJAS REMINDER
+    # TEJAS REMINDER 1
     # ========================================================
 
     elif (
@@ -1219,6 +1306,7 @@ def handle_message(text, user_id, name=None):
     ):
 
         if user_id == OWNER_ID:
+
             return (
                 "👑 REMINDER FOR TEJAS\n\n"
                 + TEJAS_REMINDER
@@ -1228,24 +1316,12 @@ def handle_message(text, user_id, name=None):
     # ========================================================
     # NO MATCH
     # ========================================================
-# ---- REMINDER 2 ----
-elif (
-    "reminder 2" in t
-    or "reminder two" in t
-    or "reminder for me as of now" in t
-    or "hey what's reminder 2" in t
-    or "hey whats reminder 2" in t
-    or "what's reminder 2" in t
-    or "whats reminder 2" in t
-    or "what is reminder 2" in t
-):
-    return "👑 REMINDER 2 FOR TEJAS\n\n" + TEJAS_REMINDER_2
-    
+
     return None
 
 
 # ============================================================
-# ---- MAIN LOOP ----
+# MAIN LOOP
 # ============================================================
 
 def main():
@@ -1259,7 +1335,9 @@ def main():
         data = get_updates(offset)
 
         if "result" not in data:
+
             time.sleep(2)
+
             continue
 
         for item in data["result"]:
@@ -1310,7 +1388,7 @@ def main():
 
 
 # ============================================================
-# ---- START BOT ----
+# START BOT
 # ============================================================
 
 if __name__ == "__main__":
